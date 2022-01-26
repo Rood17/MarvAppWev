@@ -1,0 +1,578 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}
+{% endblock title %}
+
+{% block content %}
+	<section class="default-banner active-blog-slider">
+
+		<div class="item-slider relative" data-hash="social" style="background: url({% static 'core/img/banner/evento-1.jpg' %});background-size: cover;">
+			<div class="overlay" style="background: rgba(0,0,0,.3)"></div>
+			<div class="container">
+				<div class="row fullscreen justify-content-center align-items-center">
+					<div class="col-md-10 col-12">
+						<div class="banner-content text-center">
+							<h4 class="text-white mb-20 text-uppercase subheader">Dj, Iluminación, Sonido y más...</h4>
+							<h1 class="text-uppercase text-white">Eventos Sociales</h1>
+							<p class="text-white display-responsive">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp <br>
+								or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+							<a href="#" class="llamativo-back text-uppercase header-btn">Saber Más</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div data-hash="dj" class="item-slider relative" style="background: url(img/banner/dj-2.jpg);background-size: cover;">
+			<div class="overlay" style="background: rgba(0,0,0,.3)"></div>
+			<div class="container">
+				<div class="row fullscreen justify-content-center align-items-center">
+					<div class="col-md-10 col-12">
+						<div class="banner-content text-center">
+							<h4 class="text-white mb-20 text-uppercase subheader">Music Rocks</h4>
+							<h1 class="text-uppercase text-white"></h1>
+							<p class="text-white display-responsive">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod temp <br>
+								or incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+							<a href="#" class="llamativo-back text-uppercase header-btn">Discover Now</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+	<div id="mainControlersHeader" class="btn-headbanner-container">
+		<button class="phantom inst-one-color" onclick="setTheme('inst')"><a href="#social">Institucional<span class="iconify" data-icon="si-glyph:disc-remove"></span></a></button>
+		<button class="phantom social-one-color" onclick="setTheme('social')"><a href="#dj">Social<span class="iconify" data-icon="si-glyph:disc-remove"></span></a></button>
+
+
+	</div>
+
+
+
+
+
+	<!-- Start about Area -->
+	<section class="section-gap info-area" id="about">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-40 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10 theme-llamativo">Acerca de MARV EVENTOS</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</div>
+			<div class="single-info row mt-40">
+				<div class="col-lg-6 col-md-12 mt-120 text-center no-padding info-left">
+					<div class="info-thumb">
+						<img src="{% static 'core/img/about/about1.webp' %}" class="img-fluid" alt="">
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12 no-padding info-rigth">
+					<div class="info-content">
+						<h3 class="pb-30">Renta de equipos audiovisuales en Ciudad de México.</h3>
+						<p>
+							Si quieres que la fiesta empiece con estilo, no busques más, MARV Eventos es tu proveedor. ¿Necesitas iluminación? Claro que sí. ¿Proyectores? Por supuesto. ¿Sistemas de sonido o micrófonos? Absolutamente. Ponte en contacto con nuestro equipo hoy mismo al 55-3727-4694 y haremos que tu evento sea inolvidable. Ofrecemos renta de equipos con o sin configuración, y ninguna solicitud es demasiado pequeña. Así que, si necesitas un par de luces de escenario o una configuración completa, háznoslo saber.
+						</p>
+						<br>
+						<h3>Técnicos con experiencia</h3>
+						<p>
+							Sabemos que la organización de un evento requiere mucha preparación, por eso contamos con un equipo de técnicos bien preparados. Nuestro personal puede ser contratado para ayudar con el montaje y desmontaje de nuestro equipo alquilado, para asegurar que tu día transcurra sin problemas de principio a fin. Si tienes tu propio equipo y necesitas ayuda para usarlo, también podemos ir al rescate. Envíanos un mensaje a continuación para hablar con un experto hoy mismo.
+						</p>
+						<br>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End about Area -->
+
+
+	<!-- Start project Area -->
+	<section class="project-area section-gap" id="project">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-30 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10 theme-llamativo">Eventos de éxito</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center d-flex">
+				<div class="active-works-carousel mt-40 col-lg-8">
+					<div class="item">
+						<img class="img-fluid" src="img/soc/personas.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h6 class="text-uppercase">Evento 1</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, eiusmod tempor incididunt utsed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/inst/set_3.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h6 class="text-uppercase">Evento 2</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, eiusmod tempor incididunt utsed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/dj/event_dj_4.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h6 class="text-uppercase">Evento 3</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, eiusmod tempor incididunt utsed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/inst/evento_30.jpg" alt="">
+						<div class="caption text-center mt-20">
+							<h6 class="text-uppercase">Evento 4</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, eiusmod tempor incididunt utsed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+					<div class="item">
+						<img class="img-fluid" src="img/soc/event_soc_6.webp" alt="">
+						<div class="caption text-center mt-20">
+							<h6 class="text-uppercase">Evento 5</h6>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, eiusmod tempor incididunt utsed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End project Area -->
+
+	<!-- ======= Portfolio Section ======= -->
+	<section id="portfolio" class="portfolio portafolio-container project-area">
+		<div class="container">
+
+			<div class="section-title portfolio-title">
+				<h2 data-aos="fade-in theme-llamativo">Equipos de alta calidad</h2>
+				<p>
+					Cuando se trata de equipos de calidad, lo tenemos todo aquí. Nuestro inventario es grande y contiene muchas piezas de equipo de última generación como pantallas LED, pantallas HD o proyectores. Puedes confiar en nosotros cuando decimos que conocemos el sector de los equipos audiovisuales. Sabemos que tenemos lo que se necesita para que tu evento corporativo o social sea un éxito.
+				</p>
+			</div>
+			<div class="btn-Portfolio-container">
+				<button class="phantom portfolioIcon inst-one-color-dark" onclick="setTheme('inst')"><a classs="" href="#dj">Institucional</a><span class="iconify" data-icon="si-glyph:disc-remove"></span></button>
+				<button class="phantom portfolioIcon social-one-color-dark" onclick="setTheme('social')"><a class="" href="#inst">Social</a><span class="iconify" data-icon="si-glyph:disc-remove"></span></button>
+				<button class="phantom portfolioIcon dj-one-color-dark" onclick="setTheme('dj')"><a class="" href="#social">DJ</a><span class="iconify dj-icon" data-icon="si-glyph:disc-remove"></span></button>
+
+			</div>
+			<div id="portfolio-flters">
+				<button class="btn active llamativo-back text-uppercase header-btn" onclick="filterSelection('all')"> Todos</button>
+				<button class="btn llamativo-back text-uppercase header-btn" onclick="filterSelection('nature')"> Eventos</button>
+				<button class="btn llamativo-back text-uppercase header-btn" onclick="filterSelection('cars')"> Iluminación</button>
+				<button class="btn llamativo-back text-uppercase header-btn" onclick="filterSelection('people')"> Sonido</button>
+			</div>
+
+			<div class="row portfolio-container" data-aos="fade-up">
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-app column nature">
+					<div class="portfolio-wrap">
+						<img src="img/dj/event_dj_4.jpg" class="img-fluid" alt="">
+						<div class="portfolio-links">
+							<a href="img/g1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bi bi-plus"></i></a>
+							<a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+						</div>
+						<div class="portfolio-info">
+							<h4>Evento 1</h4>
+							<p>Descripción leve</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-web column cars">
+					<div class="portfolio-wrap">
+						<img src="img/equipo/sonido_2.jpg" class="img-fluid" alt="">
+						<div class="portfolio-links">
+							<a href="img/elements/d.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+							<a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+						</div>
+						<div class="portfolio-info">
+							<h4>Sonido 3</h4>
+							<p>Descripción</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-app column cars">
+					<div class="portfolio-wrap">
+						<img src="/img/equipo/ilum_led.png" class="img-fluid" alt="">
+						<div class="portfolio-links">
+							<a href="/img/equipo/ilum1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+							<a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+						</div>
+						<div class="portfolio-info">
+							<h4>Iluminación 1</h4>
+							<p>descripción</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 portfolio-item filter-app column cars">
+					<div class="portfolio-wrap">
+						<img src="/img/equipo/ilum2.png" class="img-fluid" alt="">
+						<div class="portfolio-links">
+							<a href="/img/equipo/ilum2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bi bi-plus"></i></a>
+							<a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+						</div>
+						<div class="portfolio-info">
+							<h4>Iluminación 4</h4>
+							<p>descripción</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-card column nature">
+					<div class="portfolio-wrap">
+						<img src="img/soc/set_42.jpg" class="img-fluid" alt="">
+						<div class="portfolio-links">
+							<a href="img/g4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bi bi-plus"></i></a>
+							<a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+						</div>
+						<div class="portfolio-info">
+							<h4>Evento 2</h4>
+							<p>Descripción</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-web column people">
+					<div class="portfolio-wrap">
+						<img src="/img/equipo/sonido_consola_2.jpg" class="img-fluid" alt="">
+						<div class="portfolio-links">
+							<a href="img/equipo/sonido_micro.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bi bi-plus"></i></a>
+							<a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+						</div>
+						<div class="portfolio-info">
+							<h4>Sonido 4</h4>
+							<p>Descripción</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-app column cars">
+					<div class="portfolio-wrap">
+						<img src="/img/equipo/ilum4.png" class="img-fluid" alt="">
+						<div class="portfolio-links">
+							<a href="/img/equipo/ilum4.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bi bi-plus"></i></a>
+							<a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+						</div>
+						<div class="portfolio-info">
+							<h4>Iluminación 3</h4>
+							<p>Descripción</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-card column people">
+					<div class="portfolio-wrap">
+						<img src="/img/equipo/sonido_consola.jpg" class="img-fluid" alt="">
+						<div class="portfolio-links">
+							<a href="/img/equipo/sonido_3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bi bi-plus"></i></a>
+							<a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+						</div>
+						<div class="portfolio-info">
+							<h4>Sonido 6</h4>
+							<p>Descripción</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-card column nature">
+					<div class="portfolio-wrap">
+						<img src="/img/inst/marca_2.jpg" class="img-fluid" alt="">
+						<div class="portfolio-links">
+							<a href="/img/soc/event_soc_7.webp" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bi bi-plus"></i></a>
+							<a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+						</div>
+						<div class="portfolio-info">
+							<h4>Evento 8</h4>
+							<p>Descripción</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 portfolio-item filter-web column cars">
+					<div class="portfolio-wrap">
+						<img src="/img/slider2.jpg" class="img-fluid" alt="">
+						<div class="portfolio-links">
+							<a href="/img/equipo/ilum4.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bi bi-plus"></i></a>
+							<a href="portfolio-details.html" title="More Details"><i class="bi bi-link"></i></a>
+						</div>
+						<div class="portfolio-info">
+							<h4>Iluminación 9</h4>
+							<p>Descripción</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+	<!-- End Portfolio Section -->
+
+
+
+	<!-- Start feature Area -->
+	<section class="feature-area section-gap" id="service">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-60 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10 theme-llamativo">Nuestros Paquetes</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 ">
+					<div class="single-feature mb-30 header-btn">
+						<h2 class="paquetes-precio">$3,100.00</h2>
+						<div class="title d-flex flex-row pb-20">
+
+							<span class="lnr lnr-user"></span>
+
+							<h4><a href="#">Paquete Casero</a></h4>
+						</div>
+						<p>
+							Tienes planeado algo pequeño en casa? Paquete para hasta 20 personas que incluye:
+
+							Sonido Lucas Nano by HK Audio
+							…
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 ">
+					<div class="single-feature mb-30 header-btn">
+						<h2 class="paquetes-precio">$3,500.00</h2>
+						<div class="title d-flex flex-row pb-20">
+							<span class="lnr lnr-license"></span>
+							<h4><a href="#">Paquete Básico</a></h4>
+						</div>
+						<p>
+							Necesitas Dj y Sonido para tu evento? Tenemos al mejor! Nuestro Paquete incluye:
+
+							Cabina retroiluminada
+							…
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 ">
+
+					<div class="single-feature mb-30 header-btn">
+						<h2 class="paquetes-precio">$4,700.00</h2>
+						<div class="title d-flex flex-row pb-20">
+							<span class="lnr lnr-diamond"></span>
+							<h4><a href="#">Paquete Antro</a></h4>
+						</div>
+						<p>
+							Quieres mejorar tu paquete Básico con un toque de luces para poner un mejor ambiente? Agregamos al paquete básico, todo lo anterior y adicionalmente:
+
+							Iluminación arquitectónica
+							…
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 ">
+					<div class="single-feature header-btn">
+						<h2 class="paquetes-precio">$6,000.00</h2>
+						<div class="title d-flex flex-row pb-20">
+							<span class="lnr lnr-rocket"></span>
+							<h4><a href="#">Paquete Karaoke</a></h4>
+						</div>
+						<p>
+							Quieres pasar una noche descubriendo talentos? Pon a tus invitados a cantar. Agregamos lo siguiente adicional al Paquete Antro:
+
+							Lienzo de proyección y proyector ó Pantalla de 48"
+							…
+						</p>
+					</div>
+				</div>
+				<div class="action-btn-container">
+					<a href="#" class="llamativo-back text-uppercase header-btn">¡Cotizar ahora!</a>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- End feature Area -->
+
+
+	<!-- Start gallery Area -->
+	<section class="gallery-area" id="gallery">
+		<div class="container-fluid">
+			<div class="row no-padding">
+				<div class="active-gallery">
+					<div class="item single-gallery">
+						<img src="img/soc/personas.jpg" alt="">
+					</div>
+					<div class="item single-gallery">
+						<img src="img/dj/fiesta_2.jpg" alt="">
+					</div>
+					<div class="item single-gallery">
+						<img src="img/soc/personas.jpg" alt="">
+					</div>
+					<div class="item single-gallery">
+						<img src="img/dj/fiesta_2.jpg" alt="">
+					</div>
+					<div class="item single-gallery">
+						<img src="img/soc/personas.jpg" alt="">
+					</div>
+					<div class="item single-gallery">
+						<img src="img/dj/fiesta_2.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End gallery Area -->
+
+
+	<!-- Start faq Area -->
+	<section class="faq-area section-gap" id="faq">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-60 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10 theme-llamativo">Preguntas Frecuentes</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row d-flex align-items-center">
+				<div class="counter-left col-lg-3 col-md-3">
+					<div class="single-facts">
+						<h2 class="counter">5962</h2>
+						<p>Eventos realizados</p>
+					</div>
+					<div class="single-facts">
+						<h2 class="counter">2394</h2>
+						<p>Equipo</p>
+					</div>
+					<div class="single-facts">
+						<h2 class="counter">1439</h2>
+						<p>Momentos Inolvidables</p>
+					</div>
+					<div class="single-facts">
+						<h2 class="counter">933</h2>
+						<p>Técnicos</p>
+					</div>
+
+				</div>
+				<div class="faq-content col-lg-9 col-md-9">
+					<div class="single-faq">
+						<h2 class="text-uppercase">
+							Lorem ipsum dolor sit amet?
+						</h2>
+						<p>
+							Lorem utsed do eiusmod tempor incididunt ipsum dolor sit amet, consectetur adipisicing elit, eiusmod tempor incididunt utsed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Incididunt utsed do eiusmod tempor.
+						</p>
+					</div>
+					<div class="single-faq">
+						<h2 class="text-uppercase">
+							Lorem ipsum dolor sit amet?
+						</h2>
+						<p>
+							Lorem utsed do eiusmod tempor incididunt ipsum dolor sit amet, consectetur adipisicing elit, eiusmod tempor incididunt utsed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Incididunt utsed do eiusmod tempor.
+						</p>
+					</div>
+					<div class="single-faq">
+						<h2 class="text-uppercase">
+							Lorem ipsum dolor sit amet?
+						</h2>
+						<p>
+							Lorem utsed do eiusmod tempor incididunt ipsum dolor sit amet, consectetur adipisicing elit, eiusmod tempor incididunt utsed do eiusmod tempor incididunt ut <br> labore et dolore magna aliqua. Incididunt utsed do eiusmod tempor.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End faq Area -->
+
+
+	<!-- Start Video Area -->
+	<section class="video-area pt-40 pb-40">
+		<div style="background-image: url(img/soc/personas.jpg); background-position: center" class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="video-content">
+				<a href="https://www.facebook.com/watch/?v=2667897666623480" class="play-btn"><img src="/img/play-btn.png" alt=""></a>
+				<div class="video-desc">
+					<h3 class="h2 text-white text-uppercase">Video Descriptivo</h3>
+					<h4 class="text-white">Video de youtube o vimeo.</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Start Video Area -->
+
+
+	<!-- Start logo Area -->
+	<section class="logo-area">
+		<div class="container">
+			<div class="row">
+
+			</div>
+		</div>
+	</section>
+	<!-- End logo Area -->
+
+
+	<!-- start contact Area -->
+	<section class="contact-area section-gap" id="contact">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-60 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10 theme-llamativo">Todo lo que necesites, Solo escríbenos</h1>
+						<p>¡Estaremos encantados de poder ayudarte!</p>
+					</div>
+				</div>
+			</div>
+			<div class="grupo-redes">
+				<span class="iconify" data-icon="cib:whatsapp"></span>
+				<span class="iconify" data-icon="fontisto:messenger"></span>
+				<span class="iconify" data-icon="bi:instagram"></span>
+			</div>
+			<form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
+				<div class="row">
+					<div class="col-lg-6 form-group">
+						<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+
+						<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+
+						<input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
+					</div>
+					<div class="col-lg-6 form-group">
+						<textarea class="common-textarea mt-10 form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+						<button class="primary-btn mt-20">Enviar<span class="lnr lnr-arrow-right"></span></button>
+						<div class="alert-msg">
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="anuncio-contacto ">
+				<h1 class="theme-llamativo">!Apcetamos todas las tarjetas y pagos a meses sin intereses!</h1>
+				<h2 class="theme-llamativo">!Nos adaptamos a tu presupuesto!</h2>
+				<h4 class="theme-llamativo">!Atención las 24 hrs.!</h4>
+			</div>
+
+		</div>
+	</section>
+	<!-- end contact Area -->
+
+	<!-- side nav -->
+	<div id="mySidenavMarv" class="sidenav">
+		<button class="phantom portfolioIcon inst-one-color-dark" onclick="setTheme('inst')"><a href="#inst" id="instNavF"><span class="iconify" data-icon="si-glyph:disc-remove"></span></a></button>
+		<button class="phantom portfolioIcon social-one-color-dark" onclick="setTheme('social')"><a href="#social" id="socialNavF"> <span class="iconify" data-icon="si-glyph:disc-remove"></span></a></button>
+		<button class="phantom portfolioIcon dj-one-color-dark" onclick="setTheme('dj')"><a class="" href="#social" id="djNavF"><span class="iconify dj-icon" data-icon="si-glyph:disc-remove"></span></a></button>
+		<button class="phantom" onclick="">
+			<a href="#" id="whatsNavF"><span class="iconify" data-icon="cib:whatsapp"></span></a></button>
+	</div>
+
+	{% endblock content %}

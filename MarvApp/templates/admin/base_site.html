@@ -1,0 +1,20 @@
+{% extends "admin/base.html" %}
+{% load static %}
+{% block title %}{{ title }} | {{ site_title|default:_('Marv Eventos') }}{% endblock %}
+
+{% block extrastyle %}
+<style>
+    
+
+</style>
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        <img src="" style="height:40px;" />
+    </a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

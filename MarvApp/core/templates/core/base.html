@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    {% load static %}
+<!-- Mobile Specific Meta -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Favicon-->
+<link rel="shortcut icon" href="img/fav.png">
+<!-- Author Meta -->
+<meta name="author" content="colorlib">
+<!-- Meta Description -->
+<meta name="description" content="Dj y renta de equipo apra eventos Sociales e Institucionales. Lo mejor en equipo para eventos a tu alcance.">
+<!-- Meta Keyword -->
+<meta name="keywords" content="">
+<!-- meta character set -->
+<meta charset="UTF-8">
+<!-- Site Title -->
+<title>Marv Eventos | {% block title %}{% endblock %}</title>
+
+<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+<!--
+        CSS
+        ============================================= -->
+<link rel="stylesheet" href="{% static 'core/css/linearicons.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/magnific-popup.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/animate.min.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/owl.carousel.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/main.css' %}">
+<link rel="stylesheet" href="{% static 'core/css/portfolio.css' %}">
+
+<!--
+        Icons
+        ============================================= -->
+<script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
+
+
+</head>
+
+<body onload="initFunctions()">
+<!-- start banner Area -->
+<section class="banner-area" id="home">
+    <!-- Start Header Area -->
+    <header id="header" class="default-header">
+        <nav class="navbar navbar-expand-lg  navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo-nav" src="{% static 'core/img/logo/logo1.png' %}" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="text-white lnr lnr-menu"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#about">Acerca</a></li>
+                        <li><a href="#portfolio">Servicios</a></li>
+                        <li><a href="#gallery">Galería</a></li>
+                        <li><a href="#faq">Faq</a></li>
+                        <li><a style="font-weight: bold" class="llamativo" href="#contact">Cotizar</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Header Area -->
+</section>
+
+{% block content %}
+{% endblock content %}
+
+	<!-- start footer Area -->
+	<footer class="footer-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-5 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>MARV Eventos</h6>
+						<p>
+							Si quieres que la fiesta empiece con estilo, no busques más, MARV Eventos es tu proveedor. ¿Necesitas iluminación? Claro que sí. ¿Proyectores? Por supuesto. ¿Sistemas de sonido o micrófonos? Absolutamente. Ponte en contacto con nuestro equipo hoy mismo al <span class="phone"><a href="#">55-3727-4694</a></span> y haremos que tu evento sea inolvidable. Ofrecemos renta de equipos con o sin configuración, y ninguna solicitud es demasiado pequeña. Así que, si necesitas un par de luces de escenario o una configuración completa, háznoslo saber.
+						</p>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						<p class="footer-text">Copyright &copy;<script>
+								document.write(new Date().getFullYear());
+							</script> Todos los derechos reservados | Heho con amor <i class="fa fa-heart-o" aria-hidden="true"></i> por <a href="https://colorlib.com" target="https://www.ftmuack.com">FTMuack</a></p>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</div>
+				</div>
+				<div class="col-lg-5  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6>Renta de Equipo para Eventos</h6>
+						<ul>
+							<li>
+								Eventos Institucionales
+							</li>
+							<li>
+								Eventos Sociales
+							</li>
+						</ul>
+						<br>
+						<hr>
+						<h6>DJ</h6>
+						<ul>
+							<li>
+								Servicio de DJ
+							</li>
+							<li>
+								Renta de equipo para fiestas
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
+					<div class="single-footer-widget">
+						<h6>¡Contáctanos!</h6>
+						<p>Redes Sociales</p>
+						<div class="grupo-redes-footer">
+							<span class="iconify" data-icon="cib:whatsapp"></span>
+							<span class="iconify" data-icon="fontisto:messenger"></span>
+							<span class="iconify" data-icon="bi:instagram"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+
+
+
+
+	<script src="{% static 'core/js/vendor/jquery-2.2.4.min.js' %}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="{% static 'core/js/styles-handler.js' %}"></script>
+	<script src="{% static 'core/js/vendor/bootstrap.min.js' %}"></script>
+	<script src="{% static 'core/js/jquery.ajaxchimp.min.js' %}"></script>
+	<script src="{% static 'core/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'core/js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'core/js/jquery.sticky.js' %}"></script>
+	<script src="{% static 'core/js/slick.js' %}"></script>
+	<script src="{% static 'core/js/jquery.counterup.min.js' %}"></script>
+	<script src="{% static 'core/js/waypoints.min.js' %}"></script>
+	<script src="{% static 'core/js/main.js' %}"></script>
+	<script>
+		function initFunctions() {
+			masterControl()
+		}
+	</script>
+</body></html>
