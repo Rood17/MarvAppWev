@@ -1,0 +1,128 @@
+	{% load static %}
+
+	<style>
+		#portfolio {
+			margin-top: 10%;
+		}
+		#portafolio-container-social, #portafolio-container-empresarial {
+			display: none;
+		}
+
+	</style>
+	<!-- ======= Portfolio Section ======= -->
+	<section id="portfolio" class="portfolio portafolio-container" data-aos="fade-up">
+		<div class="container">
+
+			<div class="section-title portfolio-title">
+				<h2 data-aos="fade-in theme-llamativo">Equipos de alta calidad</h2>
+				<p>
+					Cuando se trata de equipos de calidad, lo tenemos todo aquí. Nuestro inventario es grande y contiene muchas piezas de equipo de última generación como pantallas LED, pantallas HD o proyectores. Puedes confiar en nosotros cuando decimos que conocemos el sector de los equipos audiovisuales. Sabemos que tenemos lo que se necesita para que tu evento corporativo o social sea un éxito.
+				</p>
+			</div>
+			<div class="btn-Portfolio-container">
+				<button class="phantom portfolioIcon inst-one-color-dark" 
+				onclick="setImgs('empresarial');"><a classs="" 
+				href="#empresarial">Empresarial</a><span class="iconify" 
+				data-icon="si-glyph:disc-remove"></span></button>
+				<button class="phantom portfolioIcon social-one-color-dark" 
+				onclick="setImgs('social');"><a class="" 
+				href="#social">Social</a><span class="iconify" 
+				data-icon="si-glyph:disc-remove"></span></button>
+			</div>
+			<div id="portfolio-flters">
+				<button 
+					class="btn llamativo-back text-uppercase header-btn" 
+					onclick="filterSelection('all')"> 
+					Todos
+				</button>
+				{% for cat in categorias %}
+				<button 
+					class="btn llamativo-back text-uppercase header-btn" 
+					onclick="filterSelection('{{cat}}')"> 
+					{{cat}}
+				</button>
+				{% endfor %}
+							
+				
+			</div>
+			<div id="portafolio-container-social">
+				<div class="row portfolio-container" data-aos="fade-up">
+					{% for item in portafolio_social %}
+					<div class="col-lg-4 col-md-6 portfolio-item filter-card column
+					{% for i in item.categoria.all %}
+						{{i.nombre}}
+					{% endfor %}
+					">
+						<div class="portfolio-wrap">
+							<img src="{{item.imagen.url}}" class="img-fluid" alt="">
+							<div class="portfolio-links">
+								<a href="" data-gallery="portfolioGallery" 
+								class="portfolio-lightbox" 
+								title="{{item.nombre}}">
+									<i class="bi bi-plus"></i>
+								</a>
+								<a href="" 
+								title="Detalles">
+								<i class="bi bi-link"></i>
+							</a>
+							</div>
+							<div class="portfolio-info">
+								<h4>{{item.nombre}}</h4>
+								<p>{{item.descripcion}}</p>
+							</div>
+						</div>
+					</div>
+					
+					{% endfor %}
+					
+
+				</div>
+			</div>
+			<div id="portafolio-container-empresarial">
+				<div class="row portfolio-container" data-aos="fade-up">
+					{% for item in portafolio_empresarial %}
+					<div class="col-lg-4 col-md-6 portfolio-item filter-card column
+					{% for i in item.categoria.all %}
+						{{i.nombre}}
+					{% endfor %}
+					">
+						<div class="portfolio-wrap">
+							<img src="{{item.imagen.url}}" class="img-fluid" alt="">
+							<div class="portfolio-links">
+								<a href="" data-gallery="portfolioGallery" 
+								class="portfolio-lightbox" 
+								title="{{item.nombre}}">
+									<i class="bi bi-plus"></i>
+								</a>
+								<a href="" 
+								title="Detalles">
+								<i class="bi bi-link"></i>
+							</a>
+							</div>
+							<div class="portfolio-info">
+								<h4>{{item.nombre}}</h4>
+								<p>{{item.descripcion}}</p>
+							</div>
+						</div>
+					</div>
+					
+					{% endfor %}
+					
+
+				</div>
+			</div>
+
+
+		</div>
+	</section>
+
+	<script>
+		var porta_social = document.getElementById('portafolio-container-social')
+		var porta_empresarial = document.getElementById('portafolio-container-empresarial')
+		 
+
+		
+		
+	
+	</script>
+	<!-- End Portfolio Section -->

@@ -33,7 +33,7 @@ const llamativoLightSocial = yellowLight;
 const llamativoLightInst = whiteLight;
 
 const llamativoDarkSocial = '#128243'
-const llamativoDarkInst = 'black'
+const llamativoDarkInst = 'white'
 const llamativoDarkDj = '#1998ab'
 const llamativoContrasteDj = '#673ab7';
 
@@ -76,7 +76,6 @@ window.onscroll = function() {onScroll()};
 
 // Master Controls
 function masterControl() {
-  setTheme()
   setMainElements()
     mySidenavMarv.style.left = '-60px';
 }
@@ -99,9 +98,7 @@ function onScroll() {
 
 // Set Colors
 function setTheme(theme) {
-
-
-
+  
 
     if (theme == 'social' || theme == undefined){
       mainColor = mainSocial;
@@ -113,8 +110,8 @@ function setTheme(theme) {
 
       // Just One Colors
       justOneColorDj = white;
-      justOneColorSocial = mainLight;
-      justOneColorInst = white;
+      justOneColorSocial = white;
+      justOneColorInst = mainLightInst;
       justOneColorDjDark = grey;
       justOneColorSocialDark = llamativoDark;
       justOneColorInstDark = grey;
@@ -139,8 +136,8 @@ function setTheme(theme) {
 
       // Just One Colors
       justOneColorDj = white;
-      justOneColorSocial = white;
-      justOneColorInst = mainLight;
+      justOneColorSocial = mainLightSocial;
+      justOneColorInst = white;
       justOneColorDjDark = grey;
       justOneColorSocialDark = grey;
       justOneColorInstDark = llamativoDark;
@@ -244,7 +241,6 @@ function setTheme(theme) {
 }
 
 function setMainElements () {
-
     // Just Vars
     let mCHeaderHeight;
 
@@ -254,6 +250,6 @@ function setMainElements () {
 
     // Main Controls Header
     mCHeaderHeight = (windowsHeight - mainControlersHeader.offsetHeight) * .90
-    mainControlersHeader.style.top = mCHeaderHeight + 'px';
+    //mainControlersHeader.style.top = mCHeaderHeight + 'px';
 
 }

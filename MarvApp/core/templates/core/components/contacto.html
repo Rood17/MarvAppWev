@@ -1,0 +1,36 @@
+	<!-- start contact Area -->
+	<section class="contact-area section-gap" id="contact">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-60 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10 theme-llamativo">Todo lo que necesites, Solo escríbenos</h1>
+						<p>¡Estaremos encantados de poder ayudarte!</p>
+					</div>
+				</div>
+			</div>
+			<div class="grupo-redes">
+				<a href="{{WHATS}}" target="_blank" ><span class="iconify" data-icon="cib:whatsapp"></span></a>
+				<a href="{{FACE}}" target="_blank" ><span class="iconify" data-icon="fontisto:messenger"></span></a>
+				<a href="{{INSTA}}" target="_blank" ><span class="iconify" data-icon="bi:instagram"></span></a>
+			</div>
+			<form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
+				<div class="row">
+					<div class="col-lg-6 form-group">
+						<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+
+						<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+
+						<input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
+					</div>
+					<div class="col-lg-6 form-group">
+						<textarea class="common-textarea mt-10 form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+						<button class="primary-btn mt-20">Enviar<span class="lnr lnr-arrow-right"></span></button>
+						<div class="alert-msg">
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</section>
+	<!-- end contact Area -->
