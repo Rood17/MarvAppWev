@@ -5,8 +5,16 @@
 // Colors Light
 const whiteLight = '#ffffff7d';
 const yellowLight = '#fcfbb370';
+const redlight = '#fcb3c770'
+const redLightTrans = '#f16c6ca6'
 const greenLight = '#0d913e';
-const secondManinColor = '#fff662';
+const verde_trans = '#b2b763bf'
+const verde_light_trans = '#dce18ea8'
+
+const inactive = '#d3cfcfc7'
+const inactive2 = '#70707069'
+//'#fff662'
+const secondManinColor = '#f16c6c';
 const white = '#ffffff'
 const grey = '#707070';
 const dark = '#333'
@@ -17,22 +25,22 @@ const mainDj = '#ca6ff7'
 const mainSocial  = secondManinColor;
 const mainInst  = '#c9c8c8';
 
-const mainLightSocial = yellowLight;
+const mainLightSocial = redlight;
 const mainLightInst = whiteLight;
 const mainLightDj = '#ffc4e97d';
 const mainDarkDj = '#8305547d'
 
 const llamativoSocial = secondManinColor;
-const llamativoInst = '#abab69';
+const llamativoInst = verde_trans;
 const llamativoDj = '#49b095';
 const djSuperContrast = '#d3cc00';
 
 // llamativo light #49b09591
 const llamativoDjLight = '#77e4ca';
-const llamativoLightSocial = yellowLight;
-const llamativoLightInst = whiteLight;
+const llamativoLightSocial = redLightTrans;
+const llamativoLightInst = verde_light_trans;
 
-const llamativoDarkSocial = '#128243'
+const llamativoDarkSocial = inactive
 const llamativoDarkInst = 'white'
 const llamativoDarkDj = '#1998ab'
 const llamativoContrasteDj = '#673ab7';
@@ -45,6 +53,7 @@ let llamativo;
 let llamativoLight;
 let llamativoDark;
 let llamativoContraste;
+let portfolioLlamativo_inst, portfolioLlamativo_social;
 
 let justOneColorDj;
 let justOneColorSocial;
@@ -58,6 +67,7 @@ let justOneColorInstDark;
 let djThemellamativo = 'inherit'
 let colorTheme;
 let superContrast;
+let redes, redes_dark;
 
 // Elements
 const windowsHeight = window.innerHeight;
@@ -111,7 +121,7 @@ function setTheme(theme) {
       // Just One Colors
       justOneColorDj = white;
       justOneColorSocial = white;
-      justOneColorInst = mainLightInst;
+      justOneColorInst = inactive;
       justOneColorDjDark = grey;
       justOneColorSocialDark = llamativoDark;
       justOneColorInstDark = grey;
@@ -123,6 +133,11 @@ function setTheme(theme) {
 
       // For body
       colorTheme = '#777777'
+
+      redes = justOneColorSocialDark
+      redes_dark = llamativoLightSocial;
+      portfolioLlamativo_inst = inactive2
+      portfolioLlamativo_social = '#707070'
 
     }
 
@@ -136,7 +151,7 @@ function setTheme(theme) {
 
       // Just One Colors
       justOneColorDj = white;
-      justOneColorSocial = mainLightSocial;
+      justOneColorSocial = inactive;
       justOneColorInst = white;
       justOneColorDjDark = grey;
       justOneColorSocialDark = grey;
@@ -149,6 +164,12 @@ function setTheme(theme) {
 
       // For body
       colorTheme = '#777777'
+
+      redes = justOneColorInstDark
+      redes_dark = justOneColorInstDark
+
+      portfolioLlamativo_inst = '#707070'
+      portfolioLlamativo_social = inactive2
 
     }
 
@@ -237,6 +258,14 @@ function setTheme(theme) {
     document.documentElement.style.setProperty('--llamativoThemeColor', llamativoThemeColor);
     document.documentElement.style.setProperty('--mainDark', mainDark);
     document.documentElement.style.setProperty('--superContrast', superContrast);
+
+    document.documentElement.style.setProperty('--llamativoLightSocial', llamativoLightSocial);
+    document.documentElement.style.setProperty('--redes', redes);
+    document.documentElement.style.setProperty('--redes-dark', redes_dark);
+    document.documentElement.style.setProperty('--llamativoLight', llamativoLight);
+
+    document.documentElement.style.setProperty('--portfolio-llamativo-inst', portfolioLlamativo_inst );
+    document.documentElement.style.setProperty('--portfolio-llamativo-social', portfolioLlamativo_social );
 
 }
 

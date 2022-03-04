@@ -2813,7 +2813,7 @@ h6 {
   color:var(--djOneColorDark)!important;
 }
 .social-one-color-dark a,  .social-one-color-dark svg{
-  color:var(--socialOneColorDark)!important;
+  color:var(--llamativoSocial)!important;
 }
 .inst-one-color-dark a, .inst-one-color-dark svg  {
   color:var(--instOneColorDark)!important;

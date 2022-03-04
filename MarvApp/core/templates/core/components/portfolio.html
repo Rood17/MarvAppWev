@@ -7,6 +7,12 @@
 		#portafolio-container-social, #portafolio-container-empresarial {
 			display: none;
 		}
+		.inst_one_color_portfolio a, .inst_one_color_portfolio svg {
+			color: var(--portfolio-llamativo-inst)
+		}
+		.social_one_color_portfolio a, .social_one_color_portfolio svg {
+			color: var(--portfolio-llamativo-social)
+		}
 
 	</style>
 	<!-- ======= Portfolio Section ======= -->
@@ -20,11 +26,11 @@
 				</p>
 			</div>
 			<div class="btn-Portfolio-container">
-				<button class="phantom portfolioIcon inst-one-color-dark" 
+				<button class="phantom portfolioIcon inst_one_color_portfolio" 
 				onclick="setImgs('empresarial');"><a classs="" 
 				href="#empresarial">Empresarial</a><span class="iconify" 
 				data-icon="si-glyph:disc-remove"></span></button>
-				<button class="phantom portfolioIcon social-one-color-dark" 
+				<button class="phantom portfolioIcon social_one_color_portfolio" 
 				onclick="setImgs('social');"><a class="" 
 				href="#social">Social</a><span class="iconify" 
 				data-icon="si-glyph:disc-remove"></span></button>
