@@ -35,3 +35,4 @@ upload/
 
 *ignorar base db
 .sqlite3
+\MarvApp\db.sqlite3
