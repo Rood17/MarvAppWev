@@ -67,7 +67,7 @@
         <nav class="navbar navbar-expand-lg  navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img class="logo-nav" src="{% static 'core/img/logo/logo1.png' %}" alt="">
+                    <img id="logoHeader" class="logo-nav" src="{% static 'core/img/logo/logo1.png' %}" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="text-white lnr lnr-menu"></span>
@@ -172,7 +172,7 @@
 		    // setear elementos html
 		function setImgs(type) {
 
-			var social_display, empresarial_display;
+			var social_display, empresarial_display, marcas_display;
 
 			if ( type == 'empresarial'){
 				setTheme('inst')
@@ -201,6 +201,7 @@
 				empresarial_display_flex = 'flex'
 				social_display = 'none'
 				empresarial_visibility = 'visible'
+				marcas_display = 'block'
 				
 
 			} else if (type == 'social') {
@@ -229,7 +230,7 @@
 				social_display = 'block'
 				empresarial_display = 'none'
 				empresarial_visibility = 'hidden'
-				
+				marcas_display = 'none'
 
 			}
 
@@ -261,6 +262,7 @@
 			faqs_social.style.display = social_display
 			video_social.style.display = social_display
 			video_empresarial.style.display = empresarial_display
+			marcasSlider.style.display = marcas_display
 
 			//marcas_empresarial.style.visibility = empresarial_visibility
 	
@@ -297,6 +299,8 @@
 				e.preventDefault();
 			});
 		});
+
+
 	</script>
     {% block scripts %}
     {% endblock %}

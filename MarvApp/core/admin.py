@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Galeria, Paquetes, Servicios, Imagenes, Portafolio, Categorias,Faqs, Contacto
+from .models import Galeria, CatPaquetes, Paquetes, Servicios, Imagenes, Portafolio, Categorias,Faqs, Contacto, CatEventos
 # Register your models here.
 
 
@@ -41,7 +41,7 @@ admin.site.register(Servicios, ServiciosAdmin)
 class PortafolioAdmin (admin.ModelAdmin):
     fieldsets = (
         ('Elemento', {
-            'fields': ('clase',  'categoria','imagen','titulo', 'descripcion')
+            'fields': ('clase',  'categoria','cat_eventos','imagen','titulo', 'descripcion')
         }),
     )
     readonly_fields = ('created', 'updated')
@@ -60,6 +60,24 @@ class CategoriasAdmin (admin.ModelAdmin):
     date_hierarchy = 'created' 
     
 admin.site.register(Categorias, CategoriasAdmin)
+
+class CatEventosAdmin (admin.ModelAdmin):
+    readonly_fields = ('created', 'updated')
+    list_display = ('nombre', 'updated')
+    search_fields = ('nombre', )
+    ordering = ('nombre',)
+    date_hierarchy = 'created' 
+    
+admin.site.register(CatEventos, CatEventosAdmin)
+
+class CatPaquetesAdmin (admin.ModelAdmin):
+    readonly_fields = ('created', 'updated')
+    list_display = ('nombre', 'updated')
+    search_fields = ('nombre', )
+    ordering = ('nombre',)
+    date_hierarchy = 'created' 
+    
+admin.site.register(CatPaquetes, CatPaquetesAdmin)
 
 class PaquetesAdmin (admin.ModelAdmin):
     readonly_fields = ('created', 'updated')

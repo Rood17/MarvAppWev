@@ -40,12 +40,43 @@
 							<h1 class="mb-10 theme-llamativo">Nuestros Paquetes</h1>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 						</div>
+						<div class="cat_eventos_container">
+							<button 
+								class="btn llamativo-back text-uppercase header-btn" 
+								onclick="filterPaquetes('all')"> 
+								Todos
+							</button>
+							{% for cat_p in cat_paquete %}
+							<button 
+								class="btn llamativo-back text-uppercase header-btn" 
+								onclick="filterPaquetes('{{cat_p}}')"> 
+								{{cat_p}}
+							</button>
+							{% endfor %}
+						</div>
+						<div class="cat_eventos_container">
+							{% for cat_e in cat_eventos %}
+							<button 
+								class="btn llamativo-back text-uppercase header-btn" 
+								onclick="filterPaquetes('{{cat_e}}')"> 
+								{{cat_e}}
+							</button>
+							{% endfor %}
+						</div>
 				</div>
+				
 			</div>
-			<div class="row" data-aos="flip-left">
+			<div class="row" >
 				{% for item in paquetes %}
-				<div class="col-lg-6 col-md-6 ">
-					<a href="{{WHATS}}" target="_blank">
+				<div class="col-lg-6 col-md-6 column 
+					{% for i in item.cat_eventos.all %}
+						{{i.nombre}}
+					{% endfor %}
+					{% for i in item.cat_paquete.all %}
+						{{i.nombre}}
+					{% endfor %}
+					" >
+					<a href="{{WHATS}}" target="_blank" >
 					<div class="single-feature mb-30 header-btn">
 						<h2 class="paquetes-precio">{{item.precio}}</h2>
 						<div class="title d-flex flex-row pb-20">
@@ -90,4 +121,21 @@
 	<script>
 		var paquetes_social = document.getElementById('paquetes_container_social')
 		var paquetes_empresarial = document.getElementById('paquetes_container_empresarial')
+	
+		// paquetes filter
+        filterPaquetes("all")
+
+        function filterPaquetes(c) {
+            
+            var x, i;
+            x = document.getElementsByClassName("column");
+
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                           
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+	
 	</script>

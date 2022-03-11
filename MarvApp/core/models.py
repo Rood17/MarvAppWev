@@ -1,6 +1,37 @@
 from django.db import models
 from ckeditor.fields import RichTextField
 
+class CatPaquetes(models.Model):
+    nombre = models.CharField(max_length=200, verbose_name="Título")
+
+    created = models.DateTimeField(
+        verbose_name="Fecha de creación", auto_now_add=True)
+    updated = models.DateTimeField(
+        verbose_name="Fecha de edición", auto_now=True)
+    class Meta:
+        verbose_name = 'Tipo de Eventos'
+        verbose_name_plural = 'Tipo de Eventos'
+        # Ordenar de más nuevos a más viejos
+        ordering= ['-created']
+        
+    def __str__(self):
+        return self.nombre
+
+class CatEventos(models.Model):
+    nombre = models.CharField(max_length=200, verbose_name="Título")
+
+    created = models.DateTimeField(
+        verbose_name="Fecha de creación", auto_now_add=True)
+    updated = models.DateTimeField(
+        verbose_name="Fecha de edición", auto_now=True)
+    class Meta:
+        verbose_name = 'Tipo de Eventos'
+        verbose_name_plural = 'Tipo de Eventos'
+        # Ordenar de más nuevos a más viejos
+        ordering= ['-created']
+        
+    def __str__(self):
+        return self.nombre
 
 class Categorias(models.Model):
     nombre = models.CharField(max_length=200, verbose_name="Título")
@@ -151,7 +182,13 @@ class Portafolio(models.Model):
     categoria = models.ManyToManyField(
         Categorias,
         verbose_name="Categorías",
-        help_text="Seleccione una o varias categorías relacionadas al item.")
+        help_text="Seleccione una o varias categorías relacionadas al item.",
+        null=True, blank=True)
+    cat_eventos = models.ManyToManyField(
+        CatEventos,
+        verbose_name="Eventos",
+        help_text="Seleccione una o varios eventos relacionadas al item.",
+        null=True, blank=True)
     imagen = models.ImageField(
         upload_to ='marvImgs/portafolio/', 
         verbose_name="Imagen")
@@ -175,6 +212,16 @@ class Portafolio(models.Model):
 class Paquetes(models.Model):
     nombre = models.CharField(max_length=200, verbose_name="Nombre")
     precio = models.CharField(max_length=200, verbose_name="Precio")
+    cat_paquete = models.ManyToManyField(
+        CatPaquetes,
+        verbose_name="Categorías",
+        help_text="Seleccione una o varias categorías relacionadas al item.",
+        null=True, blank=True)
+    cat_eventos = models.ManyToManyField(
+        CatEventos,
+        verbose_name="Eventos",
+        help_text="Seleccione una o varios eventos relacionadas al item.",
+        null=True, blank=True)
     descripcion = models.TextField(max_length=200, verbose_name="Breve descripción")
 
     created = models.DateTimeField(

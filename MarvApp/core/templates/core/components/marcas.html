@@ -8,7 +8,7 @@
         max-height: 120px!important;
     }
 </style>
-<div class="owl-carousel-2" data-aos="zoom-in">
+<div id="marcasSlider" class="owl-carousel-2" data-aos="zoom-in">
     <div> <img  src="{% static 'core/img/marcas/a.jpg' %}" /></div>
     <div> <img  src="{% static 'core/img/marcas/b.jpg' %}" /></div>
     <div> <img  src="{% static 'core/img/marcas/c.png' %}" /></div>
@@ -18,4 +18,8 @@
     <div> <img  src="{% static 'core/img/marcas/g.png' %}" /></div>
     <div> <img  src="{% static 'core/img/marcas/h.png' %}" /></div>
   </div>
+
+  <script>
+      let marcasSlider = document.getElementById('marcasSlider')
+  </script>
 

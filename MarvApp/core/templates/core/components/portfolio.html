@@ -10,8 +10,13 @@
 		.inst_one_color_portfolio a, .inst_one_color_portfolio svg {
 			color: var(--portfolio-llamativo-inst)
 		}
-		.social_one_color_portfolio a, .social_one_color_portfolio svg {
+		.social_one_color_portfolio a, .social_one_color_portfolio svg 
+		{
 			color: var(--portfolio-llamativo-social)
+		}
+		.cat_eventos_container {
+			width: 100%;
+			text-align: center;
 		}
 
 	</style>
@@ -42,20 +47,32 @@
 					Todos
 				</button>
 				{% for cat in categorias %}
-				<button 
-					class="btn llamativo-back text-uppercase header-btn" 
-					onclick="filterSelection('{{cat}}')"> 
-					{{cat}}
-				</button>
+					<button 
+						class="btn llamativo-back text-uppercase header-btn" 
+						onclick="filterSelection('{{cat}}')"> 
+						{{cat}}
+					</button>
 				{% endfor %}
 							
 				
 			</div>
 			<div id="portafolio-container-social">
+				<div class="cat_eventos_container">
+					{% for cat_ev in cat_eventos %}
+					<button 
+						class="btn llamativo-back text-uppercase header-btn" 
+						onclick="filterSelection('{{cat_ev}}')"> 
+						{{cat_ev}}
+					</button>
+					{% endfor %}
+				</div>
 				<div class="row portfolio-container" data-aos="fade-up">
 					{% for item in portafolio_social %}
 					<div class="col-lg-4 col-md-6 portfolio-item filter-card column
 					{% for i in item.categoria.all %}
+						{{i.nombre}}
+					{% endfor %}
+					{% for i in item.cat_eventos.all %}
 						{{i.nombre}}
 					{% endfor %}
 					">

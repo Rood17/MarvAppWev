@@ -92,6 +92,17 @@ function masterControl() {
 
 // Scroll function
 function onScroll() {
+
+  // 999 checar
+  if ( document.documentElement.scrollTop > 2) {
+    // mostrar logo white
+    document.getElementById("logoHeader").src = "static/core/img/logo/logo2.png";
+  } else {
+    //mostrar black
+    document.getElementById("logoHeader").src = "static/core/img/logo/logo1.png";
+  }
+
+
   if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight)
     {
       console.log("Pasing!!!!")
