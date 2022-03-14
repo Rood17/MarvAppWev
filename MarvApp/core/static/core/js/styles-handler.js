@@ -283,13 +283,18 @@ function setTheme(theme) {
 function setMainElements () {
     // Just Vars
     let mCHeaderHeight;
+    let height = window.innerHeight;
 
     /**********************************************************
         Proportions
     */
 
     // Main Controls Header
+    console.log('mainControlersHeader.offsetHeight : ' +mainControlersHeader.offsetHeight)
+    
     mCHeaderHeight = (windowsHeight - mainControlersHeader.offsetHeight) * .90
+    console.log('windowsHeight : ' +windowsHeight)
+    console.log('windowsHeight : ' +height)
     //mainControlersHeader.style.top = mCHeaderHeight + 'px';
 
 }

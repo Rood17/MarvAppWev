@@ -86,7 +86,7 @@ $(document).ready(function () {
                 items: 2,
             },
             900: {
-                items: 6,
+                items: 5,
             }
 
         }
@@ -158,6 +158,22 @@ $(document).ready(function () {
         filterSelection("all")
 
         function filterSelection(c) {
+            
+            var x, i;
+            x = document.getElementsByClassName("column");
+
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                           
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        // paquetes filter
+        filterPaquetes("all")
+
+        function filterPaquetes(c) {
             
             var x, i;
             x = document.getElementsByClassName("column");

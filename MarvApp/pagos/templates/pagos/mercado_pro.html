@@ -1,0 +1,74 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %} Inicio
+{% endblock title %}
+
+{% block content %}
+
+<style>
+  .mercado-continaer-form
+  { 
+    margin:15%
+  }
+ </style>
+
+<div class="mercado-continaer-form">
+  <h1>Mercado Pago - Generar Pago</h1>
+  <p>Favor de ingresar los datos de los clientes</p>
+  <br><br>
+    <form id="registerForm" action="" method="post" role="form" class="row g-3">
+      {% csrf_token %}
+      <!-- Data user -->
+          <div class="form-floating mb-3 col-md-6">
+              <input name="name" type="name" maxlength="25" class="form-control" id="formName" placeholder="Nombre(s)">
+          </div>
+          <div class="form-floating col-md-6">
+              <input name="lastName" type="lastName" maxlength="25" class="form-control"
+                   id="formLastName" placeholder="Apellidos">
+          </div>
+          <div class="form-floating mb-3 col-md-12">
+              <input name="email" type="email" maxlength="35" class="form-control" id="formEmail"
+                   placeholder="Emai">
+          </div>
+          <div class="form-floating mb-3 col-md-6">
+            <input name="producto" type="text" maxlength="25" class="form-control" id="producto" placeholder="Producto">
+        </div>
+        <div class="form-floating col-md-6">
+            <input name="precio" type="number" maxlength="25" class="form-control"
+                 id="formLastName" placeholder="Costo">
+        </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Generar</button>
+      </div>
+      <br><br><br>
+
+
+  </form>
+  
+  
+   <!-- Step #2 -->
+  {% if preference %}
+    <div id="link_pago">
+      <br>
+      <h3>Liga de pago para - {{cliente}}</h3>
+      <a  href="{{preference.init_point}}" target="_blank">{{preference.init_point}}</a>    <!-- Step #2 -->
+    </div>
+  {% endif %}
+  
+</div>
+<script>
+  //<![CDATA[
+function getlink() {
+  var link = document.getElementById('init_point').innerHTML
+  var aux = document.createElement("input");
+  aux.setAttribute("value","{{preference.init_point}}");
+  document.body.appendChild(aux);
+  aux.select();
+  document.execCommand("copy");
+  document.body.removeChild(aux);
+  }
+  //]]>
+</script>
+
+{% endblock %}

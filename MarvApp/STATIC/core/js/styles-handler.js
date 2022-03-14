@@ -96,10 +96,10 @@ function onScroll() {
   // 999 checar
   if ( document.documentElement.scrollTop > 2) {
     // mostrar logo white
-    document.getElementById("logoHeader").src = "static/core/img/logo/logo1.png";
+    document.getElementById("logoHeader").src = "static/core/img/logo/logo2.png";
   } else {
     //mostrar black
-    document.getElementById("logoHeader").src = "static/core/img/logo/logo2.png";
+    document.getElementById("logoHeader").src = "static/core/img/logo/logo1.png";
   }
 
 
@@ -283,13 +283,18 @@ function setTheme(theme) {
 function setMainElements () {
     // Just Vars
     let mCHeaderHeight;
+    let height = window.innerHeight;
 
     /**********************************************************
         Proportions
     */
 
     // Main Controls Header
+    console.log('mainControlersHeader.offsetHeight : ' +mainControlersHeader.offsetHeight)
+    
     mCHeaderHeight = (windowsHeight - mainControlersHeader.offsetHeight) * .90
+    console.log('windowsHeight : ' +windowsHeight)
+    console.log('windowsHeight : ' +height)
     //mainControlersHeader.style.top = mCHeaderHeight + 'px';
 
 }

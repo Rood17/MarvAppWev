@@ -18,7 +18,17 @@
 			width: 100%;
 			text-align: center;
 		}
-
+		.img-fluid-porta {
+			height: 150px!important;
+		}
+		.portfolio-container {
+			margin: 8% 0 0;
+		}
+		@media (max-width: 426px) {
+			.img-fluid-porta {
+				height: 200px!important;
+			}
+		  }
 	</style>
 	<!-- ======= Portfolio Section ======= -->
 	<section id="portfolio" class="portfolio portafolio-container" data-aos="fade-up">
@@ -68,7 +78,7 @@
 				</div>
 				<div class="row portfolio-container" data-aos="fade-up">
 					{% for item in portafolio_social %}
-					<div class="col-lg-4 col-md-6 portfolio-item filter-card column
+					<div class="col-lg-3 col-md-3 portfolio-item filter-card column
 					{% for i in item.categoria.all %}
 						{{i.nombre}}
 					{% endfor %}
@@ -77,7 +87,7 @@
 					{% endfor %}
 					">
 						<div class="portfolio-wrap">
-							<img src="{{item.imagen.url}}" class="img-fluid" alt="">
+							<img src="{{item.imagen.url}}" class="img-fluid img-fluid-porta" alt="">
 							<div class="portfolio-links">
 								<a href="" data-gallery="portfolioGallery" 
 								class="portfolio-lightbox" 
@@ -90,7 +100,7 @@
 							</a>
 							</div>
 							<div class="portfolio-info">
-								<h4>{{item.nombre}}</h4>
+								<h4>{{item.titulo}}</h4>
 								<p>{{item.descripcion}}</p>
 							</div>
 						</div>
@@ -104,7 +114,7 @@
 			<div id="portafolio-container-empresarial">
 				<div class="row portfolio-container" data-aos="fade-up">
 					{% for item in portafolio_empresarial %}
-					<div class="col-lg-4 col-md-6 portfolio-item filter-card column
+					<div class="col-lg-3 col-md-3 portfolio-item filter-card column
 					{% for i in item.categoria.all %}
 						{{i.nombre}}
 					{% endfor %}

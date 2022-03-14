@@ -12,13 +12,26 @@
             margin-right: 10px;
         }
         .social-sidenav a {
-            top: 280px;
+            top: 430px;
             background-color: violet;
         }
         .empresarial-sidenav a {
-            top: 206px;
+            top: 503px;
             background-color: turquoise;
         }
+        @media (max-width: 426px) {
+            .social-sidenav a {
+                top: 430px;
+            }
+            .empresarial-sidenav a {
+                top: 503px;
+            }
+        } 
+        @media (max-width: 321px) {
+            #social_nav {
+                right:0;
+            }
+        }  
     </style>
 
     <!-- side nav -->
@@ -31,7 +44,7 @@
         </button>
         <button class="phantom social-one-color social-sidenav" 
             onclick="setImgs('social');">
-            <a href="#social">
+            <a id="social_nav" href="#social">
                 <span class="iconify" data-icon="si-glyph:disc-remove"></span>
                 Social
             </a>

@@ -3,20 +3,48 @@
 <style>
     .owl-carousel-2  img {
         margin: 5% 0 5%;
-        padding: 5%;
-        width: auto!important;
+        padding: 12% 18%;
+        width: 100%!important;
         max-height: 120px!important;
+    }
+    .filtros-marcas{
+        -webkit-filter:grayscale(1);
+        filter:grayscale(1);
+        -webkit-transition : -webkit-filter 1s ease-out;
+        transition : -webkit-filter 1s ease-out;
+    }
+    .filtros-marcas:hover{
+        -webkit-filter:grayscale(0);
+        filter:grayscale(0);
+    }
+    #marca_uber {
+        padding: 15% 10%;
+    }
+    #marca_place {
+        padding: 10% 20%;
+    }
+    #marca_wordchan{
+        padding: 10% 5%;
+    }
+    #marca_fedex {
+        padding: 12% 10%;
+    }
+    #marca_pepsico {
+        padding: 12% 5%;
+    }
+    #marca_lbel {
+        padding: 10% 18%;
     }
 </style>
 <div id="marcasSlider" class="owl-carousel-2" data-aos="zoom-in">
-    <div> <img  src="{% static 'core/img/marcas/a.jpg' %}" /></div>
-    <div> <img  src="{% static 'core/img/marcas/b.jpg' %}" /></div>
-    <div> <img  src="{% static 'core/img/marcas/c.png' %}" /></div>
-    <div> <img  src="{% static 'core/img/marcas/d.jpg' %}" /></div>
-    <div> <img  src="{% static 'core/img/marcas/e.jpg' %}" /></div>
-    <div> <img  src="{% static 'core/img/marcas/f.jpg' %}" /></div>
-    <div> <img  src="{% static 'core/img/marcas/g.png' %}" /></div>
-    <div> <img  src="{% static 'core/img/marcas/h.png' %}" /></div>
+    <div> <img class="filtros-marcas" src="{% static 'core/img/marcas/1.png' %}" /></div>
+    <div> <img class="filtros-marcas" src="{% static 'core/img/marcas/2.png' %}" /></div>
+    <div> <img id="marca_pepsico" class="filtros-marcas" src="{% static 'core/img/marcas/4.png' %}" /></div>
+    <div> <img id="marca_uber" class="filtros-marcas" src="{% static 'core/img/marcas/5.png' %}" /></div>
+    <div> <img id="marca_place" class="filtros-marcas" src="{% static 'core/img/marcas/7.png' %}" /></div>
+    <div> <img id="marca_wordchan" class="filtros-marcas" src="{% static 'core/img/marcas/8.jpg' %}" /></div>
+    <div> <img id="marca_fedex" class="filtros-marcas" src="{% static 'core/img/marcas/9.png' %}" /></div>
+    <div> <img id="marca_lbel" class="filtros-marcas" src="{% static 'core/img/marcas/10.png' %}" /></div>
   </div>
 
   <script>
