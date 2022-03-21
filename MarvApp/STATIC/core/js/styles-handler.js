@@ -30,15 +30,19 @@ const mainLightInst = whiteLight;
 const mainLightDj = '#ffc4e97d';
 const mainDarkDj = '#8305547d'
 
-const llamativoSocial = secondManinColor;
-const llamativoInst = verde_trans;
+
 const llamativoDj = '#49b095';
 const djSuperContrast = '#d3cc00';
 
 // llamativo light #49b09591
 const llamativoDjLight = '#77e4ca';
+
+// MAIN 1
 const llamativoLightSocial = redLightTrans;
 const llamativoLightInst = verde_light_trans;
+// 2 
+const llamativoSocial = secondManinColor;
+const llamativoInst = verde_trans;
 
 const llamativoDarkSocial = inactive
 const llamativoDarkInst = 'white'
