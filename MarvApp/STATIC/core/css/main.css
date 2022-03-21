@@ -2360,7 +2360,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .single-feature {
-  background-color: var(--llamativo);
+  /*background-color: var(--llamativo);*/
   padding: 30px 30px 15px 30px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
