@@ -1,0 +1,227 @@
+{% load static %}
+	<style>
+		#paquetes_container_social, #paquetes_container_empresarial {
+			display:none;
+		}
+		#paquetes_container_empresarial .single-feature {
+			padding:15px;
+			margin: 0 0 10%;
+		} 
+		.emp-card-container {
+			text-align: center;
+			width: 100%;
+			margin: auto;
+		}
+		.emp-card-container h6 {
+			margin: 0;
+			font-size: 15px;
+		}
+		.paquetes-grupo-redes {
+			color: var(--mainColor);
+			font-size:1.5rem;
+			padding: 12px 3%
+		}
+		.paquetes-grupo-redes svg {
+			color: var(--mainColor);
+			font-size:1.5rem;
+			margin: 0 3%
+		}
+		.paquete-title span, h6 {
+			color: var(--mainLight)
+		}
+		.consideraciones-container {
+			text-align: center;
+			margin: 5% 25% 5%;
+		}
+		.color-link {
+			color: var(--mainColor);
+		}
+		.btn-paquetes{
+			color: grey;
+			background-color: white;
+			border-color: var(--llamativoLight);
+		}
+		.btn-modal-container {
+			width: 100;
+			text-align: center;
+		}
+		.list-consideraciones-contianer {
+			text-align: left;
+			list-style: circle;
+		}
+		@media (max-width: 426px) {
+			.consideraciones-container {
+				margin: 5% 5% 5%;
+			}
+		  }
+	</style>
+
+	<!-- Start feature Area -->
+	<section class="feature-area section-gap" id="service">
+		<div id="paquetes_container_social" class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-60 col-lg-8">
+						<div class="title text-center">
+							<h1 class="mb-10 theme-llamativo">Nuestros Paquetes</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						</div>
+						<div class="cat_eventos_container">
+							<button 
+								class="btn llamativo-back text-uppercase header-btn" 
+								onclick="filterPaquetes('all')"> 
+								Todos
+							</button>
+							{% for cat_p in cat_paquete %}
+							<button 
+								class="btn llamativo-back text-uppercase header-btn" 
+								onclick="filterPaquetes('{{cat_p}}')"> 
+								{{cat_p}}
+							</button>
+							{% endfor %}
+						</div>
+						<div class="cat_eventos_container">
+							{% for cat_e in cat_eventos %}
+							<button 
+								class="btn llamativo-back text-uppercase header-btn" 
+								onclick="filterPaquetes('{{cat_e}}')"> 
+								{{cat_e}}
+							</button>
+							{% endfor %}
+						</div>
+				</div>
+				
+			</div>
+			<div class="row" >
+				{% for item in paquetes %}
+				<div class="col-lg-6 col-md-6 column 
+					{% for i in item.cat_eventos.all %}
+						{{i.nombre}}
+					{% endfor %}
+					{% for i in item.cat_paquete.all %}
+						{{i.nombre}}
+					{% endfor %}
+					" >
+					<a href="{{WHATS}}" target="_blank" >
+					<div class="single-feature mb-30 header-btn">
+						<h2 class="paquetes-precio">{{item.precio}}</h2>
+						<div class="title d-flex flex-row pb-20">
+
+							<span class="lnr lnr-user"></span>
+
+							<h4><a href="#">{{item.nombre}}</a></h4>
+						</div>
+						<p>
+							{{item.descripcion}}
+						</p>
+					</div>
+					</a>
+					<div class="btn-modal-container">
+						<button type="button" class="btn btn-paquetes" data-toggle="modal" data-target="#paquetes_modal_{{item.pk}}">
+							Saber Más
+						</button>
+					</div>
+						<!-- Modal -->
+						<div class="modal fade" id="paquetes_modal_{{item.pk}}" tabindex="-1" role="dialog" aria-labelledby="paquetes_modal_{{item.pk}}" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+								<h5 class="modal-title" id="paquetes_modal_label_{{item.pk}}">{{item.nombre}}</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								</div>
+								<div class="modal-body">
+								<p>{{item.caracteristicas}}</p>
+								</div>
+								<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+								</div>
+							</div>
+							</div>
+						</div>
+				</div>
+				{% endfor %}
+			</div>
+			<br>
+			<div class="consideraciones-container">
+				<br>
+				<h3>Consideraciones:</h3>
+				<br>
+				<ul class="list-consideraciones-contianer">
+					<li>Es necesario hacer un scouting previo del lugar antes del evento.</li>
+					<li>Todos los costos aplican si es montado en planta baja o con uso de elevador. Si es necesario "volar" o cargar el equipo tendrárcanosun costo extra de $500 pesos.</li>
+					<li>Dependiendo de la acústica y de las dimensiones del lugar podría ser necesario
+						agregar un sistema de sonido adicional para una correcta sonorización del espacio.
+					</li>
+					<li>Cualquier avería o descompostura en cualquiera de los equipos ocurrida durante el evento
+						deberá ser cubierta al 100% por el cliente.
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="paquetes_container_empresarial" class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-60 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10 theme-llamativo">¡Haz una Cotización!</h1>
+						<p>Escríbenos o márcanos para realizar una cotización, 
+							nos encantará conocer más de tu proyecto.</p>
+					</div>
+				</div>
+			</div>
+			<div class="emp-card-container">
+				<a href="{{WHATS}}" target="_blank">
+				<div class="col-lg-8 col-md-8 m-auto">
+					<div class="single-feature mb-30 header-btn">
+						<h6 style="color:var(--llamativoInst)">¡Contáctanos Ahora!</h6>
+					</div>
+				</div>
+				</a>
+			</div>
+			
+		</div>
+	</section>
+	<!-- End feature Area -->
+
+	<script>
+		var paquetes_social = document.getElementById('paquetes_container_social')
+		var paquetes_empresarial = document.getElementById('paquetes_container_empresarial')
+	
+		// paquetes filter
+        filterPaquetes("all")
+
+        function filterPaquetes(c) {
+            
+            var x, i;
+            x = document.getElementsByClassName("column");
+
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                           
+                w3RemoveClass2(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass2(x[i], "show");
+            }
+        }
+		function w3RemoveClass2(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+		function w3AddClass2(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+	
+	</script>

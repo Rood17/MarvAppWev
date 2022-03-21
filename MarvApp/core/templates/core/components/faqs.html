@@ -1,0 +1,74 @@
+	{% load static %}
+	<style>
+		#faqs_empresarial, #faqs_social
+		{ 
+			display:none;
+		}
+ 	</style>
+	<!-- Start faq Area -->
+	<section class="faq-area section-gap" id="faq" >
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="menu-content pb-60 col-lg-8">
+					<div class="title text-center">
+						<h1 class="mb-10 theme-llamativo">Preguntas Frecuentes</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row d-flex align-items-center">
+				<div class="counter-left col-lg-3 col-md-3">
+					<div class="single-facts">
+						<h2 class="counter">5962</h2>
+						<p>Eventos realizados</p>
+					</div>
+					<div class="single-facts">
+						<h2 class="counter">2394</h2>
+						<p>Equipo</p>
+					</div>
+					<div class="single-facts">
+						<h2 class="counter">1439</h2>
+						<p>Momentos Inolvidables</p>
+					</div>
+					<div class="single-facts">
+						<h2 class="counter">933</h2>
+						<p>Técnicos</p>
+					</div>
+
+				</div>
+				<div id=faqs_social class="faq-content col-lg-9 col-md-9">
+
+					{% for item in faqs_social %}
+					<div class="single-faq">
+						<h2 class="text-uppercase">
+							{{item.pregunta}}
+						</h2>
+						<p>
+							{{item.respuesta}}
+						</p>
+					</div>
+					{% endfor %}
+
+				</div>
+				<div id=faqs_empresarial class="faq-content col-lg-9 col-md-9">
+
+					{% for item in faqs_empresarial %}
+					<div class="single-faq">
+						<h2 class="text-uppercase">
+							{{item.pregunta}}
+						</h2>
+						<p>
+							{{item.respuesta}}
+						</p>
+					</div>
+					{% endfor %}
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<script>
+		var faqs_social = document.getElementById('faqs_social')
+		var faqs_empresarial = document.getElementById('faqs_empresarial')
+	</script>
+	<!-- End faq Area -->

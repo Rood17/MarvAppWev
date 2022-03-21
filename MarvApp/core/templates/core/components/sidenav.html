@@ -1,0 +1,52 @@
+	
+{% load static %}
+    <style>
+        #mySidenavMarv a {
+            font-size: 15px;
+            padding: 12px 23px;
+            width: 110px;
+            z-index:1000;
+            background-color: var(--llamativoLight);
+        }
+        #mySidenavMarv svg {
+            margin-right: 10px;
+        }
+        .social-sidenav a {
+            top: 430px;
+            background-color: violet;
+        }
+        .empresarial-sidenav a {
+            top: 503px;
+            background-color: turquoise;
+        }
+        @media (max-width: 426px) {
+            .social-sidenav a {
+                top: 430px;
+            }
+            .empresarial-sidenav a {
+                top: 503px;
+            }
+        } 
+        @media (max-width: 321px) {
+            #social_nav {
+                right:0;
+            }
+        }  
+    </style>
+
+    <!-- side nav -->
+	<div id="mySidenavMarv" class="sidenav">
+        <button class="phantom inst-one-color empresarial-sidenav" 
+            onclick="setImgs('empresarial');">
+            <a href="#empresarial"><span class="iconify" data-icon="si-glyph:disc-remove">
+            </span>Empresarial
+            </a>
+        </button>
+        <button class="phantom social-one-color social-sidenav" 
+            onclick="setImgs('social');">
+            <a id="social_nav" href="#social">
+                <span class="iconify" data-icon="si-glyph:disc-remove"></span>
+                Social
+            </a>
+        </button>
+	</div>

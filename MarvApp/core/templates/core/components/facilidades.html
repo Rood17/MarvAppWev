@@ -1,0 +1,119 @@
+{% load static %}
+<style>
+    .container-facilidades {
+        padding:  0 10% 10%;
+        text-align: center;
+    }
+    .container-facilidades svg {
+        font-size: 2.5rem;
+    }
+    .container-facilidades .single-feature:hover a,.container-facilidades .single-feature:hover 
+    .container-facilidades .title .lnr {
+        color:black;
+    }
+    .facilidades-card {
+        min-height: 157px;
+    }
+    .single-feature-facilidades{
+        background-color:white;
+    }
+    .logo-facilidades {
+        width: 50%
+    }
+    .logo-facilidades-efectivo{
+        width:20%;
+    }
+    .tarjetas-facilidades-container{
+        margin: 10% 0
+    }
+</style>
+<div class="container-facilidades">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 " data-aos="flip-left">
+                <a href="{{WHATS}}" target="_blank" >
+                <div class="facilidades-card single-feature single-feature-facilidades mb-30 header-btn">
+                    <div class="title pb-20">
+
+                        <span class="iconify" data-icon="ant-design:clock-circle-outlined"></span>
+
+                        <h4><a> !Atención las 24 hrs.!</a></h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 " data-aos="flip-left">
+                <a href="{{WHATS}}" target="_blank" >
+                <div class="facilidades-card single-feature single-feature-facilidades mb-30 header-btn">
+                    <div class="title pb-20">
+
+                        <span class="iconify" data-icon="system-uicons:calendar-month"></span>
+
+                        <h4><a> !Contamos con pagos a meses sin intereses!</a></h4>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-md-4 " data-aos="flip-left">
+                <a href="{{WHATS}}" target="_blank">
+                <div class="single-feature single-feature-facilidades mb-30 header-btn">
+                   
+                    <div class="title pb-20">
+
+                        <span class="iconify" data-icon="bx:money-withdraw"></span>
+
+                        <h4><a>!Nos adaptamos a tu presupuesto!</a></h4>
+                    </div>
+              
+
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-md-5 " data-aos="flip-left">
+                <a href="{{WHATS}}" target="_blank" >
+                <div class="single-feature single-feature-facilidades mb-30 header-btn">
+                    <div class="title pb-20">
+    
+                        <span class="iconify" data-icon="majesticons:creditcard-line"></span>    
+                        <h4><a>!Bienvenidas las tarjetas de crédito y débito!</a></h4>
+                        <div class='tarjetas-facilidades-container'>
+                            <img class="logo-facilidades" src='{% static "core/img/marcas/tarjetas.jpg" %}' />
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-lg-7 col-md-7 " data-aos="flip-left">
+                <a href="{{WHATS}}" target="_blank" >
+                <div class="single-feature single-feature-facilidades mb-30 header-btn">
+                    <div class="title pb-20">
+    
+                        <span class="iconify" data-icon="fluent:wallet-credit-card-20-regular"></span>
+    
+                        <h4><a>Depositos, transferencias y carteras electrónicas</a></h4>
+                        <img class="logo-facilidades" src='{% static "core/img/marcas/55.jpg" %}' />
+                        <img class="logo-facilidades" src='{% static "core/img/marcas/66.jpg" %}' />
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 " data-aos="flip-left">
+                <a href="{{WHATS}}" target="_blank" >
+                <div class="single-feature single-feature-facilidades mb-30 header-btn">
+                    <div class="title pb-20">
+    
+                        <span class="iconify" data-icon="bi:cash-coin"></span>
+    
+                        <h4><a>Efectivo en tiendas</a></h4>
+                        <img class="logo-facilidades-efectivo" src='{% static "core/img/marcas/22.jpg" %}' />
+                        <img class="logo-facilidades-efectivo" src='{% static "core/img/marcas/33.jpg" %}' />
+                        <img class="logo-facilidades-efectivo" src='{% static "core/img/marcas/44.jpg" %}' />
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+</div>

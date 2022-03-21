@@ -1881,7 +1881,7 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 9;
+  z-index: 1000;
 }
 
 .menu-bar {
@@ -2204,7 +2204,7 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-block;
 }
 .info-thumb img {
-  height:500px;
+  height:350px;
 }
 
 @media (max-width: 800px) {
@@ -2355,12 +2355,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .active-works-carousel .owl-dots .owl-dot.active {
-  background: var(--llamativoDark);
+  background: var(--llamativo);
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
 .single-feature {
-  background-color: var(--llamativo);
+  /**background-color: var(--llamativo);*/
   padding: 30px 30px 15px 30px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -2484,7 +2484,7 @@ h1, h2, h3, h4, h5, h6 {
 .video-area {
   padding: 200px 0 60px 0;
   position: relative;
-  background: url(../img/video-bg.jpg) no-repeat center center/cover;
+  background: url() no-repeat center center/cover;
 }
 
 .video-area .overlay-bg {
@@ -2813,7 +2813,7 @@ h6 {
   color:var(--djOneColorDark)!important;
 }
 .social-one-color-dark a,  .social-one-color-dark svg{
-  color:var(--socialOneColorDark)!important;
+  color:var(--llamativoSocial)!important;
 }
 .inst-one-color-dark a, .inst-one-color-dark svg  {
   color:var(--instOneColorDark)!important;
@@ -2846,7 +2846,7 @@ h6 {
 .btn-headbanner-container {
 
   position: absolute;
-top: 4%;
+top: 0;
 z-index: 100;
 width: 100%;
 text-align: center;
@@ -2932,23 +2932,23 @@ padding: 1%;
     animation: fadeIn ease 8s;
 }
 #mySidenavMarv a {
-
-  position: fixed;
-  left: -40px;
-  transition: 0.2s;
-  padding: 15px;
-  width: 60px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  border-radius: 0 5px 5px 0;
-  z-index: 100;
+    position: fixed;
+    /* left: 187px; */
+    right: -40px;
+    transition: 0.2s;
+    padding: 12px 23px;
+    width: 157px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px 0px 0px 5px;
+    z-index: 100;
 
 
 }
 
 #mySidenavMarv a:hover {
-  left: 0;
+  right: 0;
 }
 
 #instNavF {
@@ -2976,7 +2976,7 @@ padding: 1%;
 =================================================**/
 
 .owl-item img {
-  max-height:350px;
+  height:225px;
 }
 
 /*================================================
@@ -2994,6 +2994,9 @@ padding: 1%;
 .grupo-redes svg, .grupo-redes-footer svg {
     font-size: 30px;
     margin: 0 2%;
+}
+.grupo-redes svg:hover, .grupo-redes-footer svg:hover {
+  color: var(--llamativo);
 }
 .grupo-redes-footer {
   text-align: left;
@@ -3035,3 +3038,7 @@ padding: 1%;
     opacity: 0;
   }
 }
+/*================================================
+*** PROJECT ***
+=================================================**/
+#PROJECT

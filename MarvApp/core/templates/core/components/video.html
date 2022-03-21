@@ -1,0 +1,28 @@
+{% load static %}
+
+<style>
+    #video_social, #video_empresarial {
+        display:none;
+    }
+</style>
+
+	<!-- Start Video Area -->
+	<section class="video-area pt-40 pb-40">
+        <div id="video_social" style="background-image: url('{% static "core/img/soc/personas.jpg"%}'); background-position: center" class="overlay overlay-bg"></div>
+		<div id="video_empresarial" style="background-image: url('{% static "core/img/soc/personas.jpg"%}'); background-position: center" class="overlay overlay-bg"></div>
+		<div class="container">
+			<div class="video-content">
+				<a href="https://www.facebook.com/watch/?v=2667897666623480" class="play-btn"><img src="{% static 'core/img/play-btn.png' %}" alt=""></a>
+				<div class="video-desc">
+					<h3 class="h2 text-white text-uppercase">MARV Eventos</h3>
+					<h4 class="text-white">Todo para tus eventos.</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Start Video Area -->
+
+    <script>
+        var video_social = document.getElementById('video_social')
+        var video_empresarial = document.getElementById('video_empresarial')
+    </script>

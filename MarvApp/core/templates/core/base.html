@@ -6,7 +6,7 @@
 <!-- Mobile Specific Meta -->
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Favicon-->
-<link rel="shortcut icon" href="img/fav.png">
+<link rel="shortcut icon" href="{% static 'core/img/logo/logo1.png' %}">
 <!-- Author Meta -->
 <meta name="author" content="colorlib">
 <!-- Meta Description -->
@@ -26,7 +26,6 @@
 <link rel="stylesheet" href="{% static 'core/css/font-awesome.min.css' %}">
 <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
 <link rel="stylesheet" href="{% static 'core/css/magnific-popup.css' %}">
-<link rel="stylesheet" href="{% static 'core/css/animate.min.css' %}">
 <link rel="stylesheet" href="{% static 'core/css/owl.carousel.css' %}">
 <link rel="stylesheet" href="{% static 'core/css/main.css' %}">
 <link rel="stylesheet" href="{% static 'core/css/portfolio.css' %}">
@@ -36,10 +35,36 @@
         ============================================= -->
 <script src="https://code.iconify.design/2/2.1.1/iconify.min.js"></script>
 
+<!--
+        AOS
+        ============================================= -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+	.btn:focus, .btn.focus {
+		box-shadow: 0 0 0 3px var(--mainLight);
+	}
+</style>
+
+{% block extrastyle %}
+	
+{% endblock extrastyle %}
+
+<style>
+	.grupo-redes a  {
+		color : var(--redes-dark);
+	}
+	.grupo-redes-footer a {
+		color : var(--redes);
+	}
+</style>
+
+
 
 </head>
 
-<body onload="initFunctions()">
+<body onload="initFunctions();">
 <!-- start banner Area -->
 <section class="banner-area" id="home">
     <!-- Start Header Area -->
@@ -47,7 +72,7 @@
         <nav class="navbar navbar-expand-lg  navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img class="logo-nav" src="{% static 'core/img/logo/logo1.png' %}" alt="">
+                    <img id="logoHeader" class="logo-nav" src="{% static 'core/img/logo/logo1.png' %}" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="text-white lnr lnr-menu"></span>
@@ -101,17 +126,6 @@
 								Eventos Sociales
 							</li>
 						</ul>
-						<br>
-						<hr>
-						<h6>DJ</h6>
-						<ul>
-							<li>
-								Servicio de DJ
-							</li>
-							<li>
-								Renta de equipo para fiestas
-							</li>
-						</ul>
 					</div>
 				</div>
 				<div class="col-lg-2 col-md-6 col-sm-6 social-widget">
@@ -119,9 +133,9 @@
 						<h6>¡Contáctanos!</h6>
 						<p>Redes Sociales</p>
 						<div class="grupo-redes-footer">
-							<span class="iconify" data-icon="cib:whatsapp"></span>
-							<span class="iconify" data-icon="fontisto:messenger"></span>
-							<span class="iconify" data-icon="bi:instagram"></span>
+							<a href="{{WHATS}}" target="_blank" ><span class="iconify" data-icon="cib:whatsapp"></span></a>
+							<a href="{{FACE}}" target="_blank" ><span class="iconify" data-icon="fontisto:messenger"></span></a>
+							<a href="{{INSTA}}" target="_blank" ><span class="iconify" data-icon="bi:instagram"></span></a>
 						</div>
 					</div>
 				</div>
@@ -146,8 +160,153 @@
 	<script src="{% static 'core/js/waypoints.min.js' %}"></script>
 	<script src="{% static 'core/js/main.js' %}"></script>
 	<script>
+
+		// vars
+		var marcas_empresarial = document.getElementById('marcas_empresarial')
+		//Default theme
+		window.onload = setTheme('social')
+		setMainElements()
+		AOS.init();
+    	mySidenavMarv.style.left = '-60px';	
+
 		function initFunctions() {
 			masterControl()
+
 		}
+
+		// setear elementos html
+		function setImgs(type) {
+
+			var social_display, empresarial_display, marcas_display;
+
+			if ( type == 'empresarial'){
+				setTheme('inst')
+				head_title.innerHTML='{{empresariales.titulo}}'
+				head_subtitle.innerHTML='Renta de quipo profesional para tus eventos'
+				head_text.innerHTML='{{empresariales.subHeader}}'
+				headImg1 = "{{img_empresarial.headImg1.url}}"
+				headImg2 = "{{img_empresarial.headImg2.url}}"
+				headImg3 = "{{img_empresarial.headImg3.url}}"
+				event1Img = "{{img_empresarial.destacada1.url}}"
+				event2Img = "{{img_empresarial.destacada2.url}}"
+				event3Img = "{{img_empresarial.destacada3.url}}"
+				event4Img = "{{img_empresarial.destacada4.url}}"
+				event5Img = "{{img_empresarial.destacada5.url}}"
+				project_txt_1 = "{{img_empresarial.titulo_destacada1}}"
+				project_txt_2 = "{{img_empresarial.titulo_destacada2}}"
+				project_txt_3 = "{{img_empresarial.titulo_destacada3}}"
+				project_txt_4 = "{{img_empresarial.titulo_destacada4}}"
+				project_txt_5 = "{{img_empresarial.titulo_destacada5}}"
+				project_subTxt_1 = "{{img_empresarial.subHeader_destacada1}}"
+				project_subTxt_2 = "{{img_empresarial.subHeader_destacada2}}"
+				project_subTxt_3 = "{{img_empresarial.subHeader_destacada3}}"
+				project_subTxt_4 = "{{img_empresarial.subHeader_destacada4}}"
+				project_subTxt_5 = "{{img_empresarial.subHeader_destacada5}}"
+				empresarial_display = 'block'
+				empresarial_display_flex = 'flex'
+				social_display = 'none'
+				empresarial_visibility = 'visible'
+				marcas_display = 'block'
+				
+
+			} else if (type == 'social') {
+				setTheme('social')
+				head_title.innerHTML='{{sociales.titulo}}'
+				head_subtitle.innerHTML='Dj, Iluminación, Sonido y más...'
+				head_text.innerHTML='{{sociales.subHeader}}'
+				headImg1 = "{{img_social.headImg1.url}}"
+				headImg2 = "{{img_social.headImg2.url}}"
+				headImg3 = "{{img_social.headImg3.url}}"
+				event1Img = "{{img_social.destacada1.url}}"
+				event2Img = "{{img_social.destacada2.url}}"
+				event3Img = "{{img_social.destacada3.url}}"
+				event4Img = "{{img_social.destacada4.url}}"
+				event5Img = "{{img_social.destacada5.url}}"
+				project_txt_1 = "{{img_social.titulo_destacada1}}"
+				project_txt_2 = "{{img_social.titulo_destacada2}}"
+				project_txt_3 = "{{img_social.titulo_destacada3}}"
+				project_txt_4 = "{{img_social.titulo_destacada4}}"
+				project_txt_5 = "{{img_social.titulo_destacada5}}"
+				project_subTxt_1 = "{{img_social.subHeader_destacada1}}"
+				project_subTxt_2 = "{{img_social.subHeader_destacada2}}"
+				project_subTxt_3 = "{{img_social.subHeader_destacada3}}"
+				project_subTxt_4 = "{{img_social.subHeader_destacada4}}"
+				project_subTxt_5 = "{{img_social.subHeader_destacada5}}"
+				social_display = 'block'
+				empresarial_display = 'none'
+				empresarial_visibility = 'hidden'
+				marcas_display = 'none'
+
+			}
+
+			bannerImg1.style.backgroundImage ="url(" + headImg1 +")";
+			bannerImg2.style.backgroundImage ="url(" + headImg2 +")";
+			bannerImg3.style.backgroundImage ="url(" + headImg3+")";
+			event1.src =event1Img;
+			event2.src =event2Img;
+			event3.src =event3Img;
+			event4.src =event4Img;
+			event5.src =event5Img;
+			project_titulo_1.innerHTML = project_txt_1;
+			project_titulo_2.innerHTML = project_txt_2;
+			project_titulo_3.innerHTML = project_txt_3;
+			project_titulo_4.innerHTML = project_txt_4;
+			project_titulo_5.innerHTML = project_txt_5;
+			project_sub_1.innerHTML = project_subTxt_1;
+			project_sub_2.innerHTML = project_subTxt_2;
+			project_sub_3.innerHTML = project_subTxt_3;
+			project_sub_4.innerHTML = project_subTxt_4;
+			project_sub_5.innerHTML = project_subTxt_5;
+			porta_social.style.display = social_display
+			porta_empresarial.style.display = empresarial_display
+			paquetes_social.style.display = social_display
+			paquetes_empresarial.style.display = empresarial_display
+			gal_social.style.display = social_display
+			gal_empresarial.style.display = empresarial_display
+			faqs_empresarial.style.display = empresarial_display
+			faqs_social.style.display = social_display
+			video_social.style.display = social_display
+			video_empresarial.style.display = empresarial_display
+			marcasSlider.style.display = marcas_display
+
+			//marcas_empresarial.style.visibility = empresarial_visibility
+	
+		}
+		window.onload = setImgs('social');
+
+		$(document).ready(function(){
+			var owl = $('.owl-carousel-2');
+			owl.owlCarousel({
+				loop:true,
+				autoplay:true,
+				autoplayTimeout:1000,
+				responsive:{
+					0:{
+						items:1
+					},
+					600:{
+						items:3
+					},            
+					960:{
+						items:5
+					},
+					1200:{
+						items:5
+					}
+				}
+			});
+			owl.on('mousewheel', '.owl-stage', function (e) {
+				if (e.deltaY>0) {
+					owl.trigger('next.owl');
+				} else {
+					owl.trigger('prev.owl');
+				}
+				e.preventDefault();
+			});
+		});
+
+
 	</script>
+    {% block scripts %}
+    {% endblock %}
 </body></html>
