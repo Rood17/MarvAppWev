@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-9q@^1a3i-q)vw!2-x0=f2!s_n$0!hnplyi1yg)20!%^2&=m!jk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['MarvApp.pythonanywhere.com', 'localhost','127.0.0.1', 'www.marveventos.com']
+ALLOWED_HOSTS = ['marvtest.pythonanywhere.com', 'localhost','127.0.0.1', 'www.marveventos.com']
 
 
 
