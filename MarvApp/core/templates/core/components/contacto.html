@@ -10,9 +10,9 @@
 				</div>
 			</div>
 			<div class="grupo-redes">
-				<a href="{{WHATS}}" target="_blank" ><span class="iconify" data-icon="cib:whatsapp"></span></a>
-				<a href="{{FACE}}" target="_blank" ><span class="iconify" data-icon="fontisto:messenger"></span></a>
-				<a href="{{INSTA}}" target="_blank" ><span class="iconify" data-icon="bi:instagram"></span></a>
+				<a class="redes-contacto" href="{{WHATS}}" target="_blank" ><span class="iconify" data-icon="cib:whatsapp"></span></a>
+				<a class="redes-contacto" href="{{FACE}}" target="_blank" ><span class="iconify" data-icon="fontisto:messenger"></span></a>
+				<a class="redes-contacto" href="{{INSTA}}" target="_blank" ><span class="iconify" data-icon="bi:instagram"></span></a>
 			</div>
 			<form class="form-area " id="myForm" action="mail.php" method="post" class="contact-form text-right">
 				<div class="row">
@@ -33,4 +33,8 @@
 			</form>
 		</div>
 	</section>
+
+	<script>
+		var redes_contacto = document.getElementsByClassName('redes-contacto')
+	</script>
 	<!-- end contact Area -->
