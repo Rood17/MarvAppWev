@@ -78,7 +78,7 @@
 				</div>
 				<div class="row portfolio-container" data-aos="fade-up">
 					{% for item in portafolio_social %}
-					<div class="col-lg-3 col-md-3 portfolio-item filter-card column
+					<div class="col-lg-3 col-md-3 portfolio-item filter-card column column-1
 					{% for i in item.categoria.all %}
 						{{i.nombre}}
 					{% endfor %}
@@ -114,7 +114,7 @@
 			<div id="portafolio-container-empresarial">
 				<div class="row portfolio-container" data-aos="fade-up">
 					{% for item in portafolio_empresarial %}
-					<div class="col-lg-3 col-md-3 portfolio-item filter-card column
+					<div class="col-lg-3 col-md-3 portfolio-item filter-card column column-1
 					{% for i in item.categoria.all %}
 						{{i.nombre}}
 					{% endfor %}
@@ -133,7 +133,7 @@
 							</a>
 							</div>
 							<div class="portfolio-info">
-								<h4>{{item.nombre}}</h4>
+								<h4>{{item.titulo}}</h4>
 								<p>{{item.descripcion}}</p>
 							</div>
 						</div>

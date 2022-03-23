@@ -8,11 +8,11 @@
 <!-- Favicon-->
 <link rel="shortcut icon" href="{% static 'core/img/logo/logo1.png' %}">
 <!-- Author Meta -->
-<meta name="author" content="colorlib">
+<meta name="FT Muack" content="Marv Eventos" />
 <!-- Meta Description -->
-<meta name="description" content="Dj y renta de equipo apra eventos Sociales e Institucionales. Lo mejor en equipo para eventos a tu alcance.">
+<meta name="description" content="Dj y renta de equipo para eventos Sociales y Empresariales. Lo mejor en equipo para eventos a tu alcance.">
 <!-- Meta Keyword -->
-<meta name="keywords" content="">
+<meta name="keywords" content="Renta de equipo para eventos sociales, renta de equipor para bodas">
 <!-- meta character set -->
 <meta charset="UTF-8">
 <!-- Site Title -->
@@ -65,6 +65,11 @@
 </head>
 
 <body onload="initFunctions();">
+	<!-- WhatsBtn -->
+	<a href="https://wa.me/+5219988201519?text=Hola%20me%20interesa%20obtener%20más%20información" target="_blank" id="whatsBtn" title="¡Contáctanos ahora!">
+		<img src="{% static 'core/img/icons/whatsapp2.png' %}" />
+	</a>
+	<!-- WhatsBtn -->
 <!-- start banner Area -->
 <section class="banner-area" id="home">
     <!-- Start Header Area -->
@@ -163,6 +168,7 @@
 
 		// vars
 		var marcas_empresarial = document.getElementById('marcas_empresarial')
+		var headerBase = document.getElementById('header')
 		//Default theme
 		window.onload = setTheme('social')
 		setMainElements()
@@ -177,7 +183,8 @@
 		// setear elementos html
 		function setImgs(type) {
 
-			var social_display, empresarial_display, marcas_display;
+			var social_display, empresarial_display, marcas_display,redes_contact_color,
+			backgroundLightColor,backgroundHeader;
 
 			if ( type == 'empresarial'){
 				setTheme('inst')
@@ -207,6 +214,9 @@
 				social_display = 'none'
 				empresarial_visibility = 'visible'
 				marcas_display = 'block'
+				redes_contact_color = 'var(--mainColor)'
+				backgroundLightColor = 'var(--mainDark)'
+				backgroundHeader = '#ffffff7d'
 				
 
 			} else if (type == 'social') {
@@ -236,6 +246,9 @@
 				empresarial_display = 'none'
 				empresarial_visibility = 'hidden'
 				marcas_display = 'none'
+				redes_contact_color = 'var(--mainDark)'
+				backgroundLightColor = '#f4ec485c'
+				backgroundHeader = '#f941445c'
 
 			}
 
@@ -268,6 +281,11 @@
 			video_social.style.display = social_display
 			video_empresarial.style.display = empresarial_display
 			marcasSlider.style.display = marcas_display
+			redes_contacto[0].style.color = redes_contact_color
+			redes_contacto[1].style.color = redes_contact_color
+			redes_contacto[2].style.color = redes_contact_color
+			projectArea.style.background = backgroundLightColor
+			headerBase.style.background = backgroundHeader
 
 			//marcas_empresarial.style.visibility = empresarial_visibility
 	

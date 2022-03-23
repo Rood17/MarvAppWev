@@ -2976,7 +2976,8 @@ padding: 1%;
 =================================================**/
 
 .owl-item img {
-  height:225px;
+  object-fit: cover;
+  height:220px;
 }
 
 /*================================================
@@ -3041,4 +3042,46 @@ padding: 1%;
 /*================================================
 *** PROJECT ***
 =================================================**/
-#PROJECT
+/*============ Whatsapp  =============*/
+    /*** Whatsapp btn float **/
+    #whatsBtn {
+      display: none;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: var(--secondary-color);
+      cursor: pointer;
+      padding: 0px;
+      width: 4%;
+      border-radius: 50px;
+    }
+    
+    #whatsBtn img {
+      width: 100%;
+      -moz-transform: scale(.8) ;
+    -webkit-transform: scale(.8) ;
+    -o-transform: scale(.8) ;
+    -ms-transform: scale(.8) ;
+    transform: scale(.8) ;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    }
+    
+    #whatsBtn img:hover {
+    -moz-transform: scale(1.1) rotate(6deg);
+    -webkit-transform: scale(1.1) rotate(6deg);
+    -o-transform: scale(1.1) rotate(6deg);
+    -ms-transform: scale(1.1) rotate(6deg);
+    transform: scale(1.1) rotate(6deg);
+    }
+
+    @media screen and (max-width: 450px) {
+      #whatsBtn {
+        width: 10%;
+      }
+  }
