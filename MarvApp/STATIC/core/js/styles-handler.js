@@ -1,6 +1,17 @@
 /*=====================================
  Let´s handler this styles!$
  =====================================*/
+// Paletas Empresarial
+//Paleta Azul
+const empresarial_azul_med = '#406E8E'
+const empresarial_azul_light = '#74B3CE'
+const empresarial_azul_dark = '#23395B'
+
+// Paletas Social
+// Paleta Roja
+const social_rojo_med = '#fff05ac9'
+const social_rojo_dark = '#720E07'
+const social_rojo_light = '#f94144'
 
 // Colors Light
 const whiteLight = '#ffffff7d';
@@ -22,26 +33,32 @@ const whats = '#47c756'
 const superBlack = 'black'
 
 const mainDj = '#ca6ff7'
-const mainSocial  = secondManinColor;
-const mainInst  = '#c9c8c8';
+const mainSocial  = empresarial_azul_med;
+const mainInst  = empresarial_azul_med;
 
-const mainLightSocial = redlight;
+const mainLightSocial = social_rojo_light;
 const mainLightInst = whiteLight;
 const mainLightDj = '#ffc4e97d';
 const mainDarkDj = '#8305547d'
 
-const llamativoSocial = secondManinColor;
-const llamativoInst = verde_trans;
+
 const llamativoDj = '#49b095';
 const djSuperContrast = '#d3cc00';
 
 // llamativo light #49b09591
 const llamativoDjLight = '#77e4ca';
-const llamativoLightSocial = redLightTrans;
-const llamativoLightInst = verde_light_trans;
+
+// MAIN 1
+const llamativoLightSocial = social_rojo_light;
+const llamativoLightInst = empresarial_azul_light;
+// 2 
+const llamativoSocial = social_rojo_med;
+const llamativoInst = empresarial_azul_med;
 
 const llamativoDarkSocial = inactive
 const llamativoDarkInst = 'white'
+
+
 const llamativoDarkDj = '#1998ab'
 const llamativoContrasteDj = '#673ab7';
 
@@ -92,6 +109,8 @@ function masterControl() {
 
 // Scroll function
 function onScroll() {
+
+  scrollFunctionWhatsApp()
 
   // 999 checar
   if ( document.documentElement.scrollTop > 2) {
@@ -298,3 +317,33 @@ function setMainElements () {
     //mainControlersHeader.style.top = mCHeaderHeight + 'px';
 
 }
+
+//=============================================================================
+//=============================================================================
+
+
+//Get the button
+var mybutton = document.getElementById("whatsBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+function scrollFunctionWhatsApp() {
+
+  console.log('HOLAAAAA 2343243242423423  ** *');
+//  console.log(document.body.scrollHeight);
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+
+        mybutton.style.display = "block";
+  } else if ( window.scrollY >= 6000){
+    mybutton.style.display = "none";
+  }else {
+        mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function whatsAppFloat() {
+  window.location.href = ""
+}
+
+//=============================================================================
+//=============================================================================
