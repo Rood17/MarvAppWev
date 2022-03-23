@@ -17,7 +17,24 @@
         -webkit-filter:grayscale(0);
         filter:grayscale(0);
     }
-    
+    #marca_uber {
+        padding: 15% 10%;
+    }
+    #marca_place {
+        padding: 10% 20%;
+    }
+    #marca_wordchan{
+        padding: 10% 5%;
+    }
+    #marca_fedex {
+        padding: 12% 10%;
+    }
+    #marca_pepsico {
+        padding: 12% 5%;
+    }
+    #marca_lbel {
+        padding: 10% 18%;
+    }
     @media (max-width: 426px) {
         #marca_uber {
             padding: 0% 10%;
@@ -37,7 +54,13 @@
         #marca_lbel {
             padding: 0% 18%;
         }
-    }
+        .owl-carousel-2 img {
+            padding: 0% 10%;
+        }
+        .owl-item img {
+            object-fit: contain
+        }
+      }
 </style>
 <div id="marcasSlider" class="owl-carousel-2" data-aos="zoom-in">
     <div> <img class="filtros-marcas" src="{% static 'core/img/marcas/1.png' %}" /></div>
