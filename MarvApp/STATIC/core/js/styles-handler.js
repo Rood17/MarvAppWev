@@ -49,19 +49,11 @@ const djSuperContrast = '#d3cc00';
 const llamativoDjLight = '#77e4ca';
 
 // MAIN 1
-<<<<<<< HEAD
-const llamativoLightSocial = redLightTrans;
-const llamativoLightInst = verde_light_trans;
-// 2 
-const llamativoSocial = secondManinColor;
-const llamativoInst = verde_trans;
-=======
 const llamativoLightSocial = social_rojo_light;
 const llamativoLightInst = empresarial_azul_light;
 // 2 
 const llamativoSocial = social_rojo_med;
 const llamativoInst = empresarial_azul_med;
->>>>>>> 4aaf579e5d4acb638a74bb267cee2de455485c0e
 
 const llamativoDarkSocial = inactive
 const llamativoDarkInst = 'white'
