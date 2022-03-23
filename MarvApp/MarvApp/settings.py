@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'core',
     'pagos',
     'rest_framework',
+    'ckeditor'
 ]
 
 MIDDLEWARE = [
