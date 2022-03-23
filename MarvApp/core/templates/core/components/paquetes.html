@@ -111,7 +111,7 @@
 							<h4><a href="#">{{item.nombre}}</a></h4>
 						</div>
 						<p>
-							{{item.descripcion}}
+							{{item.descripcion | safe}}
 						</p>
 					</div>
 					</a>
@@ -131,7 +131,7 @@
 								</button>
 								</div>
 								<div class="modal-body">
-								<p>{{item.caracteristicas}}</p>
+								<p>{{item.caracteristicas | safe}}</p>
 								</div>
 								<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

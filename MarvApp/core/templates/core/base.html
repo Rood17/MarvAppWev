@@ -66,7 +66,7 @@
 
 <body onload="initFunctions();">
 	<!-- WhatsBtn -->
-	<a href="https://wa.me/+5219988201519?text=Hola%20me%20interesa%20obtener%20más%20información" target="_blank" id="whatsBtn" title="¡Contáctanos ahora!">
+	<a href="{{WHATS}}" target="_blank" id="whatsBtn" title="¡Contáctanos ahora!">
 		<img src="{% static 'core/img/icons/whatsapp2.png' %}" />
 	</a>
 	<!-- WhatsBtn -->
@@ -169,6 +169,7 @@
 		// vars
 		var marcas_empresarial = document.getElementById('marcas_empresarial')
 		var headerBase = document.getElementById('header')
+		var getCloned = document.getElementsByClassName('cloned')
 		//Default theme
 		window.onload = setTheme('social')
 		setMainElements()
@@ -194,6 +195,7 @@
 				headImg1 = "{{img_empresarial.headImg1.url}}"
 				headImg2 = "{{img_empresarial.headImg2.url}}"
 				headImg3 = "{{img_empresarial.headImg3.url}}"
+				headImg4 = "{{img_empresarial.headImg1.url}}"
 				event1Img = "{{img_empresarial.destacada1.url}}"
 				event2Img = "{{img_empresarial.destacada2.url}}"
 				event3Img = "{{img_empresarial.destacada3.url}}"
@@ -217,6 +219,7 @@
 				redes_contact_color = 'var(--mainColor)'
 				backgroundLightColor = 'var(--mainDark)'
 				backgroundHeader = '#ffffff7d'
+				getCloned[2].style.display ='none'
 				
 
 			} else if (type == 'social') {
@@ -227,6 +230,7 @@
 				headImg1 = "{{img_social.headImg1.url}}"
 				headImg2 = "{{img_social.headImg2.url}}"
 				headImg3 = "{{img_social.headImg3.url}}"
+				headImg4 = "{{img_social.headImg1.url}}"
 				event1Img = "{{img_social.destacada1.url}}"
 				event2Img = "{{img_social.destacada2.url}}"
 				event3Img = "{{img_social.destacada3.url}}"
@@ -255,6 +259,7 @@
 			bannerImg1.style.backgroundImage ="url(" + headImg1 +")";
 			bannerImg2.style.backgroundImage ="url(" + headImg2 +")";
 			bannerImg3.style.backgroundImage ="url(" + headImg3+")";
+			bannerImg4.style.backgroundImage ="url(" + headImg4+")";
 			event1.src =event1Img;
 			event2.src =event2Img;
 			event3.src =event3Img;
