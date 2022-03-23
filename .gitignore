@@ -33,6 +33,8 @@ download/
 /img/*
 upload/
 
+.pyc
 *ignorar base db
 .sqlite3
 \MarvApp\db.sqlite3
+
