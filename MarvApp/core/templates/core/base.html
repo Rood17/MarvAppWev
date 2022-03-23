@@ -85,13 +85,17 @@
 
                 <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
                     <ul class="navbar-nav">
-                        <li><a href="#home">Inicio</a></li>
+						{% if '/pagos/' in request.path %}
+						<li><a href="{% url 'home' %}">Regresar a Home</a></li>
+						<li><a href="https://marvtest.pythonanywhere.com/admin/">Ir al Admin</a></li>
+						{% else %}
+						<li><a href="#home">Inicio</a></li>
                         <li><a href="#about">Acerca</a></li>
                         <li><a href="#portfolio">Servicios</a></li>
                         <li><a href="#gallery">Galería</a></li>
                         <li><a href="#faq">Faq</a></li>
                         <li><a style="font-weight: bold" class="llamativo" href="#contact">Cotizar</a></li>
-
+						{% endif %}
                     </ul>
                 </div>
             </div>
@@ -125,7 +129,7 @@
 						<h6>Renta de Equipo para Eventos</h6>
 						<ul>
 							<li>
-								Eventos Institucionales
+								Eventos Empresariales
 							</li>
 							<li>
 								Eventos Sociales
