@@ -222,8 +222,8 @@ class Paquetes(models.Model):
         verbose_name="Eventos",
         help_text="Seleccione una o varios eventos relacionadas al item.",
         null=True, blank=True)
-    descripcion = models.TextField(max_length=200, verbose_name="Breve descripción")
-    caracteristicas = models.TextField(max_length=600, verbose_name="Características")
+    descripcion = RichTextField(verbose_name="Breve descripción")
+    caracteristicas = RichTextField(verbose_name="Características")
     created = models.DateTimeField(
         verbose_name="Fecha de creación", auto_now_add=True)
     updated = models.DateTimeField(
